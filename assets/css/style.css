@@ -1,0 +1,80 @@
+body{
+  text-align: center;
+}
+
+.panel{
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  cursor: pointer
+}
+
+.panel:hover{
+  box-shadow: inset 0px 0px 0px 8px cyan;
+  box-sizing: border-box; 
+}
+
+
+.bottom-right-panel {
+  border-bottom-right-radius: 100%;
+  background-color: red;
+}
+
+.bottom-left-panel {
+  border-bottom-left-radius: 100%;
+  background-color: blue;
+}
+
+.top-right-panel {
+  border-top-right-radius: 100%;
+  background-color: green;
+}
+
+.top-left-panel {
+border-top-left-radius: 100%;
+  background-color: yellow;
+}
+
+.active{
+  background-color: white;
+}
+
+
+.center{
+  display: inline-block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: gray;
+  top: 135px;
+  left: 540px;
+}
+
+
+
+.active{
+  background-color: white;
+}
+
+.switches{
+  background-color: gray;
+  position: absolute;
+}
+
+#startBtn{
+  position: absolute;
+  top: 400px;
+  left: 250px;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
