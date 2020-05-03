@@ -6,7 +6,6 @@
 
 body{
     height: 100%;
-    text-align: center;
     margin-top: 30px;
 }
 
@@ -17,13 +16,14 @@ body{
 .main{
     overflow: auto;
     padding-bottom: 150px;
+    text-align: center;
 }
 
 
 .panel{
   width: 200px;
   height: 200px;
-  display: inline-block;
+  display: none;
   cursor: pointer
 }
 
@@ -55,6 +55,16 @@ border-top-left-radius: 100%;
 
 .active{
   background-color: white;
+}
+
+
+#startButton{
+  position: absolute;
+  top: 400px;
+  left: 250px;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
 }
 
 
