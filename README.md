@@ -1,18 +1,19 @@
-bout
-This application (app) is my rendition of the classic simple memory game, Simon. The aim of the game is to replicate a sequence of signals which are displayed via a synchronised combination of musical tones and animated buttons.
+Hello all and welcome to my version of the Simon game
 
-You can find out more about the original Simon game and rules by watching this video, or visiting this Wikipedia page.
+The goal of the game Simon is to remember and reproduce a sequence of panels/colours progressively increasing in difficulty after the correct sequence has been reproduce.    
 
-Why This Project?
-I created this game for the Interactive Frontend Development project. The project scope was to create the game using HTML, CSS and JavaScript, with the core focus being the functional logic created with JavaScript.
+Please see the Wikipedia page for more define rules of the Simon game.
 
-There was a choice of three different projects. My weakest area of JavaScript was with understanding functions and how they can be called or passed to other functions. This was a major aspect of the Simon game project, so choosing this project would enable me to develop my weakest area. I learnt a lot during the course of the project, and it has definitely helped me to stregthen my weakest area.
+I choose this project for the Interactive Frontend Development project. The project scope was to create the game using HTML, CSS and JavaScript and# due to the simple yet functional uses needed of JavaScript.
+
+There were 2 options to pick from and even throw I did struggled throw the JavaScript lessons I wanted to pick the Simon game as I believe the fundamentals of JavaScript needed for it will help with grasp the basics of JavaScript and how they are used in a full project.
 
 UX
 User Stories
-I want to be presented with a random series of button presses.
-When I input the correct series of button presses, I want the same series of button presses to be shown in the next round, but with an additional button press added to the series.
-If I press the wrong button, I want to be notified of this and be presented with the same series of button presses before the game will allow me to try again.
+I want a random selection of colours/panels to be highlighted,
+I want the same series of colours/panels to be highlighted again in the next round, but with an additional colour/panel added to the sequence,
+If I press the wrong colour/panel in the sequence I want to be notified of this and the random sequence to be repeated and after this has been competed I will be allowed to try again,
+
 I want to be able to see a display which shows me which round I am currently on - the round number should correspond to the number of button presses in that round.
 I want to hear a different sound for each game button, both when the sequence plays, and also when I press the buttons.
 I want to have a 'strict mode' option, which takes me back to the start of the game if I press the wrong button in a sequence.
