@@ -13,38 +13,29 @@ User Stories
 I want a random selection of colours/panels to be highlighted,
 I want the same series of colours/panels to be highlighted again in the next round, but with an additional colour/panel added to the sequence,
 If I press the wrong colour/panel in the sequence I want to be notified of this and the random sequence to be repeated and after this has been competed I will be allowed to try again,
+I want a counter showing the number of colures/panels that will need to be selected in the round and this to be shown as the game level,
+I want a ‘perfect-run’ option, which dose not allow any incorrect colours/panels to be selected or the game resets the sequence,
+I want a ‘super-speed’ option which increases the speed of highlighting the colours/panels in the sequence,
+I want a ‘unlimited-rounds’ option which allows that game sequence to go on,
+I want to be notified when I have compiled all set round in the sequence,
 
-I want to be able to see a display which shows me which round I am currently on - the round number should correspond to the number of button presses in that round.
-I want to hear a different sound for each game button, both when the sequence plays, and also when I press the buttons.
-I want to have a 'strict mode' option, which takes me back to the start of the game if I press the wrong button in a sequence.
-I want a 'reset' button, which will allow me to return to the start of the game when pressed.
-I want to have a 'hard mode' option, which speeds up the sequence as the rounds progress.
-I want to have a 'legendary mode' which is speeds up the sequence as the rounds progress, and allows for no mistakes.
-I want to be notified of when I win the game after completing a set number of rounds.
-I want to be able to turn the sound on and off.
 Research
-To understand the game, I researched existing renditions of the Simon game, which gave me an idea of the layout and functionality that those renditions were using. This gave me some insight into what options I could implement within my rendition of the game, and helped me to plan for my project.
+To see the different styles and functionality I had a look at some of the existing types of the Simon games and also some of the tutorials on how to build a Simon game which give me some understanding and insight into what I could implement with my Simon game.
 
-Most of the renditions I saw seemed to us a circular user interface (UI), which contained all the game's controls within it. However, the responsiveness of these apps seemed to be an issue. Some of the renditions that I saw used a UI similar to what I used in my rendition, which seemed to be much more responsive. This is my reasoning why I chose that particular UI design.
+Looking at the most of the Simon game the controls and level counters seem to be in the centre of the colours/panels which seemed to slow down the pace at some pointes of the game and could affect the ‘super-speed’ option which is my (UI) design dose not match the original Simon game.
 
 Style Rationale
-I've chosen to style my app in the way that I have, as I felt that it best reflected the game. The game was popular in the 1980s, so the fonts and colour scheme that I've chosen create an 'Arcade' game feeling for users. I've also chosen to condense the layout to make it easier for the user to interact with the game controls.
 
-Wireframes
-I drew my wireframes using Balsamiq. I have done separate wireframes to show my consideration of how to make my website/app responsive. The links to the files are below:
-
-index.html (xs and sm)
-index.html (md)
-band.html (lg and xl)
-There are some differences between my wireframes and my final website. This was due to visual preferences and feedback received from my mentor, and also other users who tested my website.
+I have chosen to keep the style of my webpage simple and to allow the options to be selected before the game to simplify it for the end users I want the page to be simple and clean reduces and confuse or errors when playing the game.
 
 Features
+
 Functionality
 A random seqence of sound and light buttons get is generated and presented to the user by the CPU.
 
-The user is then required to input/repeat the displayed sequence correctly by clicking the relevant button sequences with a cursor on laptop/desktop devices, or a finger/thumb on touch devices. A valid user input initiates the next round where the same sequence is replayed, but with an additional step.
+The user is the required to repeat the random sequence of colours/panels in the same order as deployed to them be clicking on the relevant colours/panels (this can be done with a cursor on laptop/desktop devices, or a finger/thumb on touch devices. A valid user input initiates the next round where the same sequence is replayed, but with an additional step.)
 
-When users click/press a button, they will hear a sound and see a light colour that corresponds to the button that they click/press. Users will only be able to click the buttons when it is their turn to do so. The buttons are disabled at all other times.
+When users click/press on any colours/panels, they will see a light colour fill the selected colours/panels that confirms the click/press . Users will only be able to click/press the colours/panels when the randomly generated sequence is finished. The colours/panels are disabled at all other times.
 
 If a user inputs the wrong sequence, a notification by a specific sound accompanied with a text message will appear in the display area, after which the previous sequence replays and allows the user to try again. 'Non-strict' mode allows for one mistake, any additional mistakes causes the user to lose the game and be presented with an accompanying pop up modal. The user can then click 'START' to restart the game. 'Strict mode' allows for no mistakes, and the user is presented with the pop up modal after the first mistake. The user can then restart the game by pressing 'START'.
 
