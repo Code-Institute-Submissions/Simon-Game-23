@@ -18,6 +18,7 @@ I want a ‘perfect-run’ option, which dose not allow any incorrect colours/pa
 I want a ‘super-speed’ option which increases the speed of highlighting the colours/panels in the sequence,
 I want a ‘unlimited-rounds’ option which allows that game sequence to go on,
 I want to be notified when I have compiled all set round in the sequence,
+I want a ‘reset mods’ which resets the page to with the latest check boxes
 
 Research
 To see the different styles and functionality I had a look at some of the existing types of the Simon games and also some of the tutorials on how to build a Simon game which give me some understanding and insight into what I could implement with my Simon game.
@@ -31,17 +32,19 @@ I have chosen to keep the style of my webpage simple and to allow the options to
 Features
 
 Functionality
-A random seqence of sound and light buttons get is generated and presented to the user by the CPU.
+a randomly generated sequence of colours/panels will be show to the user.
 
 The user is the required to repeat the random sequence of colours/panels in the same order as deployed to them be clicking on the relevant colours/panels (this can be done with a cursor on laptop/desktop devices, or a finger/thumb on touch devices. A valid user input initiates the next round where the same sequence is replayed, but with an additional step.)
 
 When users click/press on any colours/panels, they will see a light colour fill the selected colours/panels that confirms the click/press . Users will only be able to click/press the colours/panels when the randomly generated sequence is finished. The colours/panels are disabled at all other times.
 
-If a user inputs the wrong sequence, a notification by a specific sound accompanied with a text message will appear in the display area, after which the previous sequence replays and allows the user to try again. 'Non-strict' mode allows for one mistake, any additional mistakes causes the user to lose the game and be presented with an accompanying pop up modal. The user can then click 'START' to restart the game. 'Strict mode' allows for no mistakes, and the user is presented with the pop up modal after the first mistake. The user can then restart the game by pressing 'START'.
+If a user inputs the wrong sequence, a notification by all the colours/panels lighting up with a text message will appear in the display area, after which the previous sequence replays and allows the user to try again. ‘perfect-run’ does not allow mistakes, if a mistake is made the user will be presented a notification by all the colours/panels will light up with a text message will appear in the display area. The user can then let the game restarting. ‘super-speed’ reduces the time between  colours/panels lighting up. ‘unlimited-rounds’ will unlimited the set number of rounds the user can play.
 
-The round number corresponds to the number of button presses so that the user can see how many steps are in the current sequence.
+The round number is the indication of how long the sequence is.
 
-If a user wants to restart the game, they can click the 'RESET' button to do so.
+The game will already reset its-self and will indicate with a flash of all colours but if the user wants to update the game modifiers then If a user can click the ‘reset mods’  button to do so.
+
+
 
 A user can play in 'Default Mode', in which a new step in the CPU sequence occurs every 800 milliseconds. The user can also play in 'Hard Mode', in which the time between each step in a sequence reduces as the rounds progress. 'Strict Mode' is compatible with any mode.
 
