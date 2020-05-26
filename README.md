@@ -36,19 +36,17 @@ a randomly generated sequence of colours/panels will be show to the user.
 
 The user is the required to repeat the random sequence of colours/panels in the same order as deployed to them be clicking on the relevant colours/panels (this can be done with a cursor on laptop/desktop devices, or a finger/thumb on touch devices. A valid user input initiates the next round where the same sequence is replayed, but with an additional step.)
 
-When users click/press on any colours/panels, they will see a light colour fill the selected colours/panels that confirms the click/press . Users will only be able to click/press the colours/panels when the randomly generated sequence is finished. The colours/panels are disabled at all other times.
-
-If a user inputs the wrong sequence, a notification by all the colours/panels lighting up with a text message will appear in the display area, after which the previous sequence replays and allows the user to try again. ‘perfect-run’ does not allow mistakes, if a mistake is made the user will be presented a notification by all the colours/panels will light up with a text message will appear in the display area. The user can then let the game restarting. ‘super-speed’ reduces the time between  colours/panels lighting up. ‘unlimited-rounds’ will unlimited the set number of rounds the user can play.
+When users click/press on any colours/panels, they will see a light colour fill the selected colours/panels that confirms the click/press. Users will only be able to click/press the colours/panels when the randomly generated sequence is finished. The colours/panels are disabled when the sequence is playing.
+If a user inputs the wrong sequence, a notification by all the colours/panels lighting up with a text message will appear in the display area, after which the previous sequence replays and allows the user to try again. ‘perfect-run’ does not allow mistakes, if a mistake is made the user will be presented a notification with all the colours/panels lighting up with a text message will appear in the display area. The will then game restart. ‘super-speed’ reduces the time between colours/panels lighting up. ‘unlimited-rounds’ will unlimited the set number of rounds the user can play.
 
 The round number is the indication of how long the sequence is.
 
-The game will already reset its-self and will indicate with a flash of all colours but if the user wants to update the game modifiers then If a user can click the ‘reset mods’  button to do so.
+If a game is “failed” then the game will autumnally reset its-self and will indicate with a flashing of all colours but if the user wants to update the game modifiers then a user can click the ‘reset mods’ button to do so.
 
+A user can play with no modifications/add-ons, in which a new step in the random sequence will be added every 800 milliseconds. The user can also play in 'super-speed’, in which the time between each step in a sequence will be every 400 milliseconds. ' perfect-run’ & ‘unlimited-rounds’ are all compatible with each mode.
 
+When the user successfully repeats the sequences correctly 20 times that means that the user has won the game (unless in ‘unlimited-rounds’ mode). When this happens, the colours/panels will continuously flash and a message will say 'YOU WIN!' in the display area. Then if nether the 'perfect-run’ or 'super-speed’ are on during this game the user will then receive another message 'do you want more of a challenge why not try the 'perfect-run’ and the 'super-speed’ game mode maybe together if you can?' the ‘reset mods’ button will be in the pop up box to let user rest the game.
 
-A user can play in 'Default Mode', in which a new step in the CPU sequence occurs every 800 milliseconds. The user can also play in 'Hard Mode', in which the time between each step in a sequence reduces as the rounds progress. 'Strict Mode' is compatible with any mode.
-
-Repeating 20 sequences correctly means that the user wins the game. When this happens, a message stating 'YOU WIN!' appears in the display area, and a specific sound plays. The user is instructed to press 'START' to start a new game. The user is also presented with a pop up modal to congratulate them and tell them that they're awesome.
 
 Existing Features
 Game Controls
