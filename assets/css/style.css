@@ -20,11 +20,26 @@ body{
 }
 
 
+.gamebuttons { 
+      text-align:center;
+     }
+
+    .gamebuttons input{
+      margin: 0 5px 0 30px;
+     }
+
+     .gamebuttons label{
+       margin: 0px 20px 0px 3px;
+     }
+
+
+
+
 .panel{
   width: 200px;
   height: 200px;
-  display: none;
-  cursor: pointer
+  display: inline-block;
+  cursor: pointer;
 }
 
 .panel:hover{
@@ -75,4 +90,26 @@ background-color: silver;
 
 .rules2{
   background-color: snow;
+}
+
+#turn {
+  position: absolute;
+  background: #330000;
+  color: red;
+  font-family: courier;
+  font-size: 20px;
+  height: 30px;
+  width: 50px;
+  margin-left: 90px;
+  margin-top: 170px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+}
+
+.text2 {
+  position: absolute;
+  font-family: 'Original Surfer', cursive;
+  margin-left: 83px;
+  margin-top: 197px;
 }
