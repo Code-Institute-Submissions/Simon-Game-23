@@ -66,3 +66,58 @@ function flashRed(){
 }
 console.log(computerarr);
 
+function alertYellow(){
+  playerarr.push(topLeft)
+  topLeft.style.backgroundColor = "white";
+  setTimeout(function(){topLeft.style.backgroundColor = "Yellow";},400);
+  computerarrVsPlayerarr()
+};
+
+function alertGreen(){
+  playerarr.push(topRight)
+  topRight.style.backgroundColor = "white";
+  setTimeout(function(){topRight.style.backgroundColor = "Green";},400);
+  computerarrVsPlayerarr()
+};
+
+function alertBlue(){
+  playerarr.push(bottomLeft)
+  bottomLeft.style.backgroundColor = "white";
+  setTimeout(function(){bottomLeft.style.backgroundColor = "Blue";},400);
+  computerarrVsPlayerarr()
+};
+
+function alertRed(){
+  playerarr.push(bottomRight)
+  bottomRight.style.backgroundColor = "white";
+  setTimeout(function(){bottomRight.style.backgroundColor = "red";},400);
+  computerarrVsPlayerarr()
+};
+
+
+
+
+function computerarrVsPlayerarr(){
+if (JSON.stringify(playerarr) == JSON.stringify(computerarr)){
+  round + 1;
+  flahsComputerSequons()
+} else{
+  alert("Lose")
+}
+}
+
+function flahsComputerSequons(){
+for (let i = 0; i < computerarr.length; ++i){
+  const item = computerarr[i];
+
+  flashButton(item)
+}
+}
+
+
+
+function flashButton(){
+  topLeft.style.background = 'white'
+  
+}
+
