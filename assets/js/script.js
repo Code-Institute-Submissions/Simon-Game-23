@@ -1,4 +1,4 @@
-let round = 0;
+let turn = 0;
 let playerarr = [];
 let computerarr = [];
 
@@ -6,24 +6,48 @@ const topRight = document.querySelector(".top-right-panel");
 const topLeft = document.querySelector(".top-left-panel");
 const bottomRight = document.querySelector(".bottom-left-panel");
 const bottomLeft = document.querySelector(".bottom-right-panel");
+
+function gamestart() {
+    startButton.style.display = 'none';
+    bottomLeft.style.display = 'inline-block';
+    bottomRight.style.display = 'inline-block';
+    topRight.style.display = 'inline-block';
+    topLeft.style.display = 'inline-block';
+    turn = 1;
+    setTimeout(function() {
+        newRound();
+    }, 1000);
+};
+
+
+function newRound() {
+    playerarr = []
+    flashColour()
+}
+
 function getRandomPanel(){
 const panels = [ topLeft, topRight, bottomLeft, bottomRight];
 return item = panels[Math.floor(Math.random() * panels.length)];
 }
-const computerarr = [
-  getRandomPanel()
-]
-if (computerarr == topLeft) {
-  flashYellow();
-} else if (computerarr == "topRight") {
-  flashGreen();
-} else if (computerarr == "bottom-left-panel") {
-  flashBlue();
-} else if (computerarr == "div.pannel.bottom-right-panel") {
-  flashRed();
+
+function flashColour(){
+const chosenElement = getRandomPanel();
+if (chosenElement == topLeft) {
+  isComputerPlayingSequence = true;
+  flashYellow()
+} else if (chosenElement == topRight) {
+  isComputerPlayingSequence = true;
+  flashGreen()
+} else if (chosenElement == bottomLeft) {
+  isComputerPlayingSequence = true;
+  flashBlue()
 } else {
-  console.log("error");
+  isComputerPlayingSequence = true;
+  flashRed()
 }
+}
+
+
 function flashYellow(){
  topLeft.style.backgroundColor = "white";
  setTimeout(function(){topLeft.style.backgroundColor = "Yellow";},500);
