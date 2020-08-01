@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    height: 100%;
+    margin-top: 30px;
+}
+
+.container{
+    min-height: 100%;
+}
+
+.main{
+    overflow: auto;
+    padding-bottom: 150px;
+    text-align: center;
+}
+
+
+.gamebuttons { 
+      text-align:center;
+     }
+
+    .gamebuttons input{
+      margin: 0 5px 0 30px;
+     }
+
+     .gamebuttons label{
+       margin: 0px 20px 0px 3px;
+     }
+
+
+
+
+.panel{
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.panel:hover{
+  box-shadow: inset 0px 0px 0px 8px cyan;
+  box-sizing: border-box; 
+}
+
+
+.bottom-right-panel {
+  border-bottom-right-radius: 100%;
+  background-color: red;
+}
+
+.bottom-left-panel {
+  border-bottom-left-radius: 100%;
+  background-color: blue;
+}
+
+.top-right-panel {
+  border-top-right-radius: 100%;
+  background-color: green;
+}
+
+.top-left-panel {
+border-top-left-radius: 100%;
+  background-color: yellow;
+}
+
+.active{
+  background-color: white;
+}
+
+
+#startButton{
+  position: absolute;
+  top: 400px;
+  left: 250px;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+}
+
+
+
+.rules1{
+background-color: silver;
+}
+
+.rules2{
+  background-color: snow;
+}
+
+#turn {
+  position: absolute;
+  background: #330000;
+  color: red;
+  font-family: courier;
+  font-size: 20px;
+  height: 30px;
+  width: 50px;
+  margin-left: 90px;
+  margin-top: 170px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+}
+
+.text2 {
+  position: absolute;
+  font-family: 'Original Surfer', cursive;
+  margin-left: 83px;
+  margin-top: 197px;
+}
