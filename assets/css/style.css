@@ -9,8 +9,9 @@ body{
     margin-top: 30px;
 }
 
-.container{
-    min-height: 100%;
+#startButton{
+  width: 50%;
+  
 }
 
 .main{
@@ -31,6 +32,13 @@ body{
      .gamebuttons label{
        margin: 0px 20px 0px 3px;
      }
+
+
+.interface{
+  background-color: black;
+  width: auto;
+  padding-bottom: 100px;
+}
 
 
 
@@ -68,17 +76,15 @@ border-top-left-radius: 100%;
   background-color: yellow;
 }
 
-.active{
-  background-color: white;
+.flashing {
+  background-color: white !important;
 }
 
 
 #startButton{
   position: absolute;
-  top: 400px;
-  left: 250px;
-  width: 200px;
   height: 50px;
+  width: 200px;
   font-size: 20px;
 }
 
@@ -93,23 +99,18 @@ background-color: silver;
 }
 
 #turn {
-  position: absolute;
   background: #330000;
   color: red;
   font-family: courier;
   font-size: 20px;
   height: 30px;
   width: 50px;
-  margin-left: 90px;
-  margin-top: 170px;
   text-align: center;
   vertical-align: middle;
   line-height: 30px;
+  margin: auto;
 }
 
 .text2 {
-  position: absolute;
   font-family: 'Original Surfer', cursive;
-  margin-left: 83px;
-  margin-top: 197px;
 }
