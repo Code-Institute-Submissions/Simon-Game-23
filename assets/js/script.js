@@ -5,6 +5,7 @@ let isOneLife = false;
 let isSuperSpeed = false;
 let round;
 
+const panels = document.querySelectorAll(".panel");
 const topRight = document.querySelector(".top-right-panel");
 const topLeft = document.querySelector(".top-left-panel");
 const bottomRight = document.querySelector(".bottom-right-panel");
@@ -63,19 +64,15 @@ function flashColour() {
     const chosenElement = getRandomPanel();
     if (chosenElement == topLeft) {
         isComputerPlayingSequence = true;
-
         flashcomputer(topLeft)
     } else if (chosenElement == topRight) {
         isComputerPlayingSequence = true;
-
         flashcomputer(topRight)
     } else if (chosenElement == bottomLeft) {
         isComputerPlayingSequence = true;
-
         flashcomputer(bottomLeft)
     } else {
         isComputerPlayingSequence = true;
-
         flashcomputer(bottomRight)
     }
 }
@@ -117,23 +114,10 @@ function computerarrVsPlayerarr() {
                 setTimeout(flahsComputerSequons, 2 * 1000)
             }
         } else {
-            topLeft.style.backgroundColor = "white";
-            topRight.style.backgroundColor = "white";
-            bottomLeft.style.backgroundColor = "white";
-            bottomRight.style.backgroundColor = "white";
+            panels.style.backgroundColor = "white";
             setTimeout(function() {
-                topLeft.style.backgroundColor = "Yellow";
+                panels.style.backgroundColor = "Yellow";
             }, 1000);
-            setTimeout(function() {
-                topRight.style.backgroundColor = "Green";
-            }, 1000);
-            setTimeout(function() {
-                bottomLeft.style.backgroundColor = "Blue";
-            }, 1000);
-            setTimeout(function() {
-                bottomRight.style.backgroundColor = "red";
-            }, 1000);
-            setTimeout(function() {
                 if (onelife == true) {
                     computerarr = [];
                     newRound();
@@ -147,10 +131,10 @@ function computerarrVsPlayerarr() {
                         }, i * 1000)
                     }
                 }
-            }, 1500);
-        }
+            }
     }
 }
+
 
 function flahsComputerSequons() {
     turn++;
