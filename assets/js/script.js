@@ -1,3 +1,4 @@
+
 let playerarr = [];
 let computerarr = [];
 let isOneLife = false;
@@ -62,156 +63,46 @@ function flashColour() {
     const chosenElement = getRandomPanel();
     if (chosenElement == topLeft) {
         isComputerPlayingSequence = true;
-        flash(topLeft)
+
+        flashcomputer(topLeft)
     } else if (chosenElement == topRight) {
         isComputerPlayingSequence = true;
-        flashGreen()
+
+        flashcomputer(topRight)
     } else if (chosenElement == bottomLeft) {
         isComputerPlayingSequence = true;
-        flashBlue()
+
+        flashcomputer(bottomLeft)
     } else {
         isComputerPlayingSequence = true;
-        flashRed()
+
+        flashcomputer(bottomRight)
     }
 }
 
 
-function flash(element) {
-  
+function flashcomputer(element) {
     let originalColor = element.style.background;
+    computerarr.push(element)
     element.style.background = 'white';
-    // wait here
-    element.style.background = originalColor;
+    setTimeout(function(){ element.style.background = originalColor; }, 400);
 }
-
-
-
-
-
 
 console.log(computerarr);
 
-function flashYellow() {
-    computerarr.push(topLeft);
-    topLeft.style.backgroundColor = "white";
-    setTimeout(function() {
-        isComputerPlayingSequence = false;
-    }, 400);
-    if (superSpeed == true) {
-        setTimeout(function() {
-            topLeft.style.backgroundColor = "Yellow";
-        }, 400);
-    } else {
-        setTimeout(function() {
-            topLeft.style.backgroundColor = "Yellow";
-        }, 800);
-    };
-};
+function flashplayer(element) {
+  if(flashcomputer == true){
+    return
+  } else{
+    let originalColor = element.style.background;
+    playerarr.push(element)
+    computerarrVsPlayerarr()
+    element.style.background = 'white';
+    setTimeout(function(){ element.style.background = originalColor; }, 400);
+  }
+}
 
-function flashGreen() {
-    computerarr.push(topRight);
-    topRight.style.backgroundColor = "white";
-    setTimeout(function() {
-        isComputerPlayingSequence = false;
-    }, 400);
-    if (superSpeed == true) {
-        setTimeout(function() {
-            topRight.style.backgroundColor = "Green";
-        }, 400);
-    } else {
-        setTimeout(function() {
-            topRight.style.backgroundColor = "Green";
-        }, 800);
-    };
-};
-
-function flashBlue() {
-    computerarr.push(bottomLeft);
-    bottomLeft.style.backgroundColor = "white";
-    setTimeout(function() {
-        isComputerPlayingSequence = false;
-    }, 400);
-    if (superSpeed == true) {
-        setTimeout(function() {
-            bottomLeft.style.backgroundColor = "Blue";
-        }, 400);
-    } else {
-        setTimeout(function() {
-            bottomLeft.style.backgroundColor = "Blue";
-        }, 800);
-    };
-};
-
-function flashRed() {
-    computerarr.push(bottomRight);
-    bottomRight.style.backgroundColor = "white";
-    setTimeout(function() {
-        isComputerPlayingSequence = false;
-    }, 400);
-    if (superSpeed == true) {
-        setTimeout(function() {
-            bottomRight.style.backgroundColor = "red";
-        }, 800);
-    } else {
-        setTimeout(function() {
-            bottomRight.style.backgroundColor = "red";
-        }, 400);
-    };
-};
-
-
-function alertYellow() {
-    if (isComputerPlayingSequence ^= true) {
-        return
-    } else {
-        playerarr.push(topLeft)
-        topLeft.style.backgroundColor = "white";
-        setTimeout(function() {
-            topLeft.style.backgroundColor = "Yellow";
-        }, 400);
-        computerarrVsPlayerarr()
-    };
-};
-
-function alertGreen() {
-    if (isComputerPlayingSequence ^= true) {
-        return
-    } else {
-        playerarr.push(topRight)
-        topRight.style.backgroundColor = "white";
-        setTimeout(function() {
-            topRight.style.backgroundColor = "Green";
-        }, 400);
-        computerarrVsPlayerarr()
-    };
-};
-
-function alertBlue() {
-    if (isComputerPlayingSequence ^= true) {
-        return
-    } else {
-        playerarr.push(bottomLeft)
-        bottomLeft.style.backgroundColor = "white";
-        setTimeout(function() {
-            bottomLeft.style.backgroundColor = "Blue";
-        }, 400);
-        computerarrVsPlayerarr()
-    };
-};
-
-function alertRed() {
-    if (isComputerPlayingSequence ^= true) {
-        return
-    } else {
-        playerarr.push(bottomRight)
-        bottomRight.style.backgroundColor = "white";
-        setTimeout(function() {
-            bottomRight.style.backgroundColor = "red";
-        }, 400);
-        computerarrVsPlayerarr()
-    };
-};
-
+console.log(playerarr);
 
 function computerarrVsPlayerarr() {
     for (let i = 0; i < playerarr.length; ++i) {
