@@ -1,9 +1,9 @@
-
 let playerarr = [];
 let computerarr = [];
 let isOneLife = false;
 let isSuperSpeed = false;
 let round;
+let isComputerPlayingSequence = false;
 
 const panels = document.querySelectorAll(".panel");
 const topRight = document.querySelector(".top-right-panel");
@@ -14,6 +14,7 @@ const onelife = document.querySelector(".onelife");
 const superSpeed = document.querySelector(".superSpeed");
 const roundCounter = document.querySelector("#turn");
 
+console.log(panels);
 
 onelife.addEventListener("click", (event) => {
     if (onelife.checked == true) {
@@ -33,10 +34,10 @@ superSpeed.addEventListener("click", (event) => {
 
 function gamestart() {
     startButton.style.display = 'none';
-    bottomLeft.style.display = 'inline-block';
+    /*panels.style.display = 'inline-block';
     bottomRight.style.display = 'inline-block';
     topRight.style.display = 'inline-block';
-    topLeft.style.display = 'inline-block';
+    topLeft.style.display = 'inline-block';*/
     turn = 1;
     roundCounter.innerHTML = 1;
     setTimeout(function() {
@@ -79,16 +80,18 @@ function flashColour() {
 
 
 function flashcomputer(element) {
+    isComputerPlayingSequence = true
     let originalColor = element.style.background;
     computerarr.push(element)
     element.style.background = 'white';
     setTimeout(function(){ element.style.background = originalColor; }, 400);
+    isComputerPlayingSequence = false
 }
 
 console.log(computerarr);
 
 function flashplayer(element) {
-  if(flashcomputer == true){
+  if(isComputerPlayingSequence == true){
     return
   } else{
     let originalColor = element.style.background;
@@ -114,7 +117,7 @@ function computerarrVsPlayerarr() {
                 setTimeout(flahsComputerSequons, 2 * 1000)
             }
         } else {
-            panels.style.backgroundColor = "white";
+            topLeft.style.backgroundColor = "white";
             setTimeout(function() {
                 panels.style.backgroundColor = "Yellow";
             }, 1000);
