@@ -5,7 +5,6 @@ let isSuperSpeed = false;
 let round;
 let isComputerPlayingSequence = false;
 
-const panels = document.querySelectorAll(".panel");
 const topRight = document.querySelector(".top-right-panel");
 const topLeft = document.querySelector(".top-left-panel");
 const bottomRight = document.querySelector(".bottom-right-panel");
@@ -14,7 +13,6 @@ const onelife = document.querySelector(".onelife");
 const superSpeed = document.querySelector(".superSpeed");
 const roundCounter = document.querySelector("#turn");
 
-console.log(panels);
 
 onelife.addEventListener("click", (event) => {
     if (onelife.checked == true) {
@@ -117,26 +115,35 @@ function computerarrVsPlayerarr() {
                 setTimeout(flahsComputerSequons, 2 * 1000)
             }
         } else {
-            topLeft.style.backgroundColor = "white";
-            setTimeout(function() {
-                panels.style.backgroundColor = "Yellow";
-            }, 1000);
+            topLeft.classList.add('flashing')
+            topRight.classList.add('flashing')
+            bottomLeft.classList.add('flashing')
+            bottomRight.classList.add('flashing')
+            setTimeout(function(){ 
+            topRight.classList.remove('flashing')
+            topLeft.classList.remove('flashing')
+            bottomLeft.classList.remove('flashing')
+            bottomRight.classList.remove('flashing'); }, 1000);
                 if (onelife == true) {
                     computerarr = [];
-                    newRound();
+                    setTimeout(function(){ newRound();}, 3000);
                     round = 0;
                 } else {
+                    setTimeout(function(){
+                        console.log("working")
                     let i = 0
                     for (i = 0; i < computerarr.length; ++i) {
                         const item = computerarr[i];
                         setTimeout(function() {
                             flashButton(item)
-                        }, i * 1000)
-                    }
+                    },3000)
                 }
-            }
+            },3000)
+        }
     }
 }
+}
+
 
 
 function flahsComputerSequons() {
