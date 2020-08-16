@@ -1,22 +1,30 @@
 *{
     margin: 0;
     padding: 0;
-
 }
 
-body{
-    height: 100%;
-    margin-top: 30px;
+.game{
+    margin-top: 25px;
+    padding-top: 25px;
+    background-color: lightgray;
+    width: 80%;
+    padding-bottom: 100px;
+}
+
+.startButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
 }
 
 #startButton{
   width: 50%;
-  
 }
 
 .main{
     overflow: auto;
-    padding-bottom: 150px;
+    margin-bottom: 150px;
     text-align: center;
 }
 
@@ -35,7 +43,6 @@ body{
 
 
 .interface{
-  background-color: black;
   width: auto;
   padding-bottom: 100px;
 }

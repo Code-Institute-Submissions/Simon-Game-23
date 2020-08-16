@@ -82,102 +82,126 @@ function flashcomputer(element) {
     let originalColor = element.style.background;
     computerarr.push(element)
     element.style.background = 'white';
-    setTimeout(function(){ element.style.background = originalColor; }, 400);
-    isComputerPlayingSequence = false
-}
-
-console.log(computerarr);
-
-function flashplayer(element) {
-  if(isComputerPlayingSequence == true){
-    return
-  } else{
-    let originalColor = element.style.background;
-    playerarr.push(element)
-    computerarrVsPlayerarr()
-    element.style.background = 'white';
-    setTimeout(function(){ element.style.background = originalColor; }, 400);
-  }
-}
-
-console.log(playerarr);
-
-function computerarrVsPlayerarr() {
-    for (let i = 0; i < playerarr.length; ++i) {
-        if (playerarr[i] === computerarr[i]) {
-            // all good, continue
-
-            const thisTheLastItem = (i === computerarr.length - 1)
-            const hasThePlayerRepeatedTheWholeSequence = (computerarr.length === playerarr.length)
-            if (thisTheLastItem && hasThePlayerRepeatedTheWholeSequence) {
-                // set timeout so that button doesn't flash
-                // as soon as sequence is completely correct
-                setTimeout(flahsComputerSequons, 2 * 1000)
-            }
-        } else {
-            topLeft.classList.add('flashing')
-            topRight.classList.add('flashing')
-            bottomLeft.classList.add('flashing')
-            bottomRight.classList.add('flashing')
-            setTimeout(function(){ 
-            topRight.classList.remove('flashing')
-            topLeft.classList.remove('flashing')
-            bottomLeft.classList.remove('flashing')
-            bottomRight.classList.remove('flashing'); }, 1000);
-                if (onelife == true) {
-                    computerarr = [];
-                    setTimeout(function(){ newRound();}, 3000);
-                    round = 0;
-                } else {
-                    setTimeout(function(){
-                        console.log("working")
-                    let i = 0
-                    for (i = 0; i < computerarr.length; ++i) {
-                        const item = computerarr[i];
-                        setTimeout(function() {
-                            flashButton(item)
-                    },3000)
-                }
-            },3000)
-        }
-    }
-}
-}
-
-
-
-function flahsComputerSequons() {
-    turn++;
-    roundCounter.innerHTML = turn;
-    let i = 0
-    for (i = 0; i < computerarr.length; ++i) {
-        const item = computerarr[i];
-        if (superSpeed) {
-            setTimeout(function() {
-                flashButton(item)
-            }, i * 400)
-        } else {
-            setTimeout(function() {
-                flashButton(item)
-            }, i * 800)
-        }
-    }
-    setTimeout(newRound, i * 1000)
-}
-
-function flashButton(buttonElement, delay) {
-    buttonElement.classList.add('flashing')
-    if (superSpeed) {
+    if (superSpeed == true) {
         setTimeout(function() {
-            buttonElement.classList.remove('flashing')
-        }, 400)
+            element.style.background = originalColor;
+        }, 400);
+        isComputerPlayingSequence = false
     } else {
         setTimeout(function() {
-            buttonElement.classList.remove('flashing')
-        }, 800)
+            element.style.background = originalColor;
+        }, 800);
+        isComputerPlayingSequence = false
     }
 }
 
+    console.log(computerarr);
+
+    function flashplayer(element) {
+        if (isComputerPlayingSequence == true) {
+            return
+        } else {
+            let originalColor = element.style.background;
+            playerarr.push(element)
+            computerarrVsPlayerarr()
+            element.style.background = 'white';
+            if (superSpeed == true) {
+                setTimeout(function() {
+                    element.style.background = originalColor;
+                }, 400);
+                isComputerPlayingSequence = false
+            } else {
+                setTimeout(function() {
+                    element.style.background = originalColor;
+                }, 800);
+                isComputerPlayingSequence = false
+            }
+        }
+    }
+
+    console.log(playerarr);
+
+    function computerarrVsPlayerarr() {
+        for (let i = 0; i < playerarr.length; ++i) {
+            if (playerarr[i] === computerarr[i]) {
+                // all good, continue
+
+                const thisTheLastItem = (i === computerarr.length - 1)
+                const hasThePlayerRepeatedTheWholeSequence = (computerarr.length === playerarr.length)
+                if (thisTheLastItem && hasThePlayerRepeatedTheWholeSequence) {
+                    // set timeout so that button doesn't flash
+                    // as soon as sequence is completely correct
+                    setTimeout(flahsComputerSequons, 3000)
+                }
+            } else {
+                topLeft.classList.add('flashing')
+                topRight.classList.add('flashing')
+                bottomLeft.classList.add('flashing')
+                bottomRight.classList.add('flashing')
+                setTimeout(function() {
+                    topRight.classList.remove('flashing')
+                    topLeft.classList.remove('flashing')
+                    bottomLeft.classList.remove('flashing')
+                    bottomRight.classList.remove('flashing');
+                }, 1000);
+                if (onelife == true) {
+                    console.log("onelife")
+                    computerarr = [];
+                    setTimeout(function() {
+                        newRound();
+                    }, 3000);
+                    round = 0;
+                } else {
+                    setTimeout(function() {
+                        playerarr = [];
+                        console.log("working")
+                        let i = 0
+                        for (i = 0; i < computerarr.length; ++i) {
+                            const item = computerarr[i];
+                            setTimeout(function() {
+                                flashButton(item)
+                            }, i * 800)
+                        }
+                    },1000)
+                }
+            }
+        }
+    }
 
 
-console.log(playerarr);
+
+    function flahsComputerSequons() {
+        turn++;
+        roundCounter.innerHTML = turn;
+        let i = 0
+        for (i = 0; i < computerarr.length; ++i) {
+            const item = computerarr[i];
+            if (superSpeed) {
+                setTimeout(function() {
+                    flashButton(item)
+                }, i * 400)
+            } else {
+                setTimeout(function() {
+                    flashButton(item)
+                }, i * 800)
+            }
+        }
+        setTimeout(newRound, i * 1000)
+    }
+
+    function flashButton(buttonElement) {
+        buttonElement.classList.add('flashing')
+        if (superSpeed) {
+            setTimeout(function() {
+                buttonElement.classList.remove('flashing')
+            }, 400)
+        } else {
+            setTimeout(function() {
+                buttonElement.classList.remove('flashing')
+            }, 800)
+        }
+    }
+
+
+
+    console.log(playerarr);
