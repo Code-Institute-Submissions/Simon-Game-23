@@ -9,11 +9,13 @@
   </head>
   <body>
   <div class="main">
+  <div class="jumbotron">
   <h1 class="display-4">Memory Game</h1>
   <p class="lead">Help train and develop your own skills and memory with this fun simple game.</p>
   <hr class="my-4">
   <p>the rules it is a three by three box which with a start button in the middle. once you hit the start button it will light up</p>
   <a class="btn btn-primary btn-lg" href="rules.html" role="button">Learn more</a>
+  </div>
   <div class="game">
 <div class="interface">
       <div class="text2">
@@ -29,11 +31,10 @@
     <input type="checkbox" id="superSpeed" name="superSpeed" class="superSpeed" >
 	</label>
     <span>
-      </div>
-    </div>
-    <div class="startButton">
+        <div class="startButton">
     <button type="button" id="startButton" onclick="gamestart()">Start</button>
     </div>
+      </div>
     <div>
       <div id="topLeft" onclick="this.disabled=true; flashplayer(topLeft)" class="panel top-left-panel"></div>
       <div id="topRight" onclick="this.disabled=true; flashplayer(topRight)" class="panel top-right-panel"></div>
