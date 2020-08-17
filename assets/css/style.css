@@ -4,22 +4,19 @@
 }
 
 .game{
-    margin-top: 25px;
+    margin: auto;
     padding-top: 25px;
-    background-color: lightgray;
-    width: 80%;
+    background-color: silver;
+    width: 75%;
     padding-bottom: 100px;
 }
 
 .startButton{
+    padding-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
-}
-
-#startButton{
-  width: 50%;
+  padding-bottom: 50px;
 }
 
 .main{
