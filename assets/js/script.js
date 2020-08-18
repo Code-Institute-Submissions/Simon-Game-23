@@ -32,6 +32,7 @@ superSpeed.addEventListener("click", (event) => {
 
 function gamestart() {
     startButton.style.display = 'none';
+    location.href="https:#turn"
     /*panels.style.display = 'inline-block';
     bottomRight.style.display = 'inline-block';
     topRight.style.display = 'inline-block';
