@@ -1,3 +1,4 @@
+debugger;
 let playerarr = [];
 let computerarr = [];
 let isOneLife = false;
@@ -16,17 +17,17 @@ const roundCounter = document.querySelector("#turn");
 
 onelife.addEventListener("click", (event) => {
     if (onelife.checked == true) {
-        isOneLife = true
+        isOnelife = true
     } else {
-        isOneLife = false;
+        isOnelife = false;
     }
 })
 
 superSpeed.addEventListener("click", (event) => {
     if (superSpeed.checked == true) {
-        isOneLife = true
+        isSuperSpeed = true
     } else {
-        superSpeed = false;
+        isSuperSpeed = false;
     }
 })
 
@@ -83,7 +84,7 @@ function flashcomputer(element) {
     let originalColor = element.style.background;
     computerarr.push(element)
     element.style.background = 'white';
-    if (superSpeed == true) {
+    if (isSuperSpeed == true) {
         setTimeout(function() {
             element.style.background = originalColor;
         }, 400);
@@ -106,7 +107,7 @@ function flashcomputer(element) {
             playerarr.push(element)
             computerarrVsPlayerarr()
             element.style.background = 'white';
-            if (superSpeed == true) {
+            if (isSuperSpeed == true) {
                 setTimeout(function() {
                     element.style.background = originalColor;
                 }, 400);
@@ -145,9 +146,11 @@ function flashcomputer(element) {
                     bottomLeft.classList.remove('flashing')
                     bottomRight.classList.remove('flashing');
                 }, 1000);
-                if (onelife == true) {
+                if (isOnelife == true) {
                     console.log("onelife")
                     computerarr = [];
+                    turn = 1;
+                    roundCounter.innerHTML = turn;
                     setTimeout(function() {
                         newRound();
                     }, 3000);
@@ -177,7 +180,7 @@ function flashcomputer(element) {
         let i = 0
         for (i = 0; i < computerarr.length; ++i) {
             const item = computerarr[i];
-            if (superSpeed) {
+            if (isSuperSpeed) {
                 setTimeout(function() {
                     flashButton(item)
                 }, i * 400)
@@ -192,7 +195,7 @@ function flashcomputer(element) {
 
     function flashButton(buttonElement) {
         buttonElement.classList.add('flashing')
-        if (superSpeed) {
+        if (isSuperSpeed) {
             setTimeout(function() {
                 buttonElement.classList.remove('flashing')
             }, 400)
