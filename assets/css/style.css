@@ -10,7 +10,7 @@ html {
 .game{
     margin: auto;
     padding-top: 25px;
-    background-color: silver;
+    background-color:#e9ecef;;
     width: 75%;
     padding-bottom: 100px;
 }
@@ -25,7 +25,6 @@ html {
 
 .main{
     overflow: auto;
-    margin-bottom: 150px;
     text-align: center;
 }
 
