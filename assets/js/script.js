@@ -1,8 +1,7 @@
-debugger;
 let playerarr = [];
 let computerarr = [];
-let isOneLife = false;
 let isSuperSpeed = false;
+let isOnelife = false;
 let round;
 let isComputerPlayingSequence = false;
 
@@ -13,7 +12,6 @@ const bottomLeft = document.querySelector(".bottom-left-panel");
 const onelife = document.querySelector(".onelife");
 const superSpeed = document.querySelector(".superSpeed");
 const roundCounter = document.querySelector("#turn");
-
 
 onelife.addEventListener("click", (event) => {
     if (onelife.checked == true) {
@@ -147,7 +145,6 @@ function flashcomputer(element) {
                     bottomRight.classList.remove('flashing');
                 }, 1000);
                 if (isOnelife == true) {
-                    console.log("onelife")
                     computerarr = [];
                     turn = 1;
                     roundCounter.innerHTML = turn;
@@ -158,7 +155,6 @@ function flashcomputer(element) {
                 } else {
                     setTimeout(function() {
                         playerarr = [];
-                        console.log("working")
                         let i = 0
                         for (i = 0; i < computerarr.length; ++i) {
                             const item = computerarr[i];
@@ -180,20 +176,22 @@ function flashcomputer(element) {
         let i = 0
         for (i = 0; i < computerarr.length; ++i) {
             const item = computerarr[i];
-            if (isSuperSpeed) {
+            if (superSpeed) {
                 setTimeout(function() {
                     flashButton(item)
                 }, i * 400)
+                item.classList.remove('flashing')
             } else {
                 setTimeout(function() {
                     flashButton(item)
                 }, i * 800)
+                item.classList.remove('flashing')
             }
         }
-        setTimeout(newRound, i * 1000)
+        setTimeout(newRound, i * 1100)
     }
 
-    function flashButton(buttonElement) {
+        function flashButton(buttonElement) {
         buttonElement.classList.add('flashing')
         if (isSuperSpeed) {
             setTimeout(function() {
