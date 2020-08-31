@@ -9,14 +9,22 @@
   </head>
   <body>
   <div class="main">
-  <div class="jumbotron">
-  <h1 class="display-4">Memory Game</h1>
-  <p class="lead">Help train and develop your own skills and memory with this fun simple game.</p>
-  <hr class="my-4">
-  <p>the rules it is a three by three box which with a start button in the middle. once you hit the start button it will light up</p>
-  <a class="btn btn-primary btn-lg" href="rules.html" role="button">Learn more</a>
-  </div>
   <div class="game">
+    <div class="jumbotron">
+  <h1>Memory Game</h1>
+  <p>Help train and develop your own skills and memory with this fun simple game.</p>
+    </div>
+    <div class="row">
+    <div class="col-md-4">
+  <hr class="lead">
+  <h2>How to Start</h2>
+  <p>To start the game use the start button and then this button will disappear and the four coloured panels and then the counter will increase to 1 and 1 panel door flash click the panel and if correct the counter will increase by 1 and that same panel will flash again with an additional one after</p>
+  <h2>What is one life</h2>
+  <p>if one life is checked that means if a colour is incorrectly clicked then the panels will flash white and round will be reset to 1</p>
+  <h2>What is Super Speed</h2>
+  <p>if Super Speed is checked that will reduce the speed of the flashes and the players flashes by half</p>
+    </div>
+  <div class="col-dm-4">
 <div class="interface">
       <div class="text2">
         Level
@@ -43,6 +51,8 @@
       <div id="bottomLeft" onclick="this.disabled=true; flashplayer(bottomLeft)" class="panel bottom-left-panel"></div>
       <div id="bottomRight" onclick="this.disabled=true; flashplayer(bottomRight)" class="panel bottom-right-panel"></div>
     </div>
+    </div>
+</div>
 </div>
   </div>
   
