@@ -11,12 +11,12 @@ html {
     margin: auto;
     padding-top: 25px;
     background-color:#e9ecef;;
-    width: 75%;
+    width: 87%;
     padding-bottom: 100px;
 }
 
 .startButton{
-    padding-top: 50px;
+  padding-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,10 +41,20 @@ html {
        margin: 0px 20px 0px 3px;
      }
 
+    .col-md-4, .col-dm-4{
+         margin: auto;
+     }
+
+     .col-md-4 p{
+         margin-left: 2%;
+         margin-right: 2%;
+     }
+
 
 .interface{
   width: auto;
   padding-bottom: 100px;
+  margin: auto;
 }
 
 
@@ -120,4 +130,46 @@ background-color: silver;
 
 .text2 {
   font-family: 'Original Surfer', cursive;
+}
+
+footer{
+   background-color: rgb(24, 10, 10);
+  background-position: relative;
+  margin-top: -150px;
+  height: 150px;
+  width: 100%;
+  clear: both;
+}
+
+
+  .personal-info-item {
+  margin-bottom:  0px;
+  display: block;
+  clear: both;
+}
+
+.personal-info-item .key, .personal-info-item .value{
+  padding-right: 2px;
+  display: inline-block;
+}
+
+.personal-info-item .key p, .personal-info-item .value p{
+  margin: 0;
+}
+
+
+.personal-info-item .key {
+  
+  margin-right: 2px;
+  padding-top: 2px;
+  vertical-align: top;
+}
+
+.personal-info-item .key p{
+  font-weight: 700;
+}
+
+personal-info-item .value{
+  position: relative;
+  width: 10%;
 }
