@@ -1,175 +1,150 @@
 *{
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
-
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
-
 .game{
-    margin: auto;
-    padding-top: 25px;
-    background-color:#e9ecef;;
-    width: 87%;
-    padding-bottom: 100px;
+	margin: auto;
+	padding-top: 25px;
+	background-color:#e9ecef;
+	width: 87%;
+	padding-bottom: 100px;
 }
-
 .startButton{
-  padding-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 50px;
+	padding-top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 50px;
 }
-
 .main{
-    overflow: auto;
-    text-align: center;
+	overflow: auto;
+	text-align: center;
 }
-
-
-.gamebuttons { 
-      text-align:center;
-     }
-
-    .gamebuttons input{
-      margin: 0 5px 0 30px;
-     }
-
-     .gamebuttons label{
-       margin: 0px 20px 0px 3px;
-     }
-
-    .col-md-4, .col-dm-4{
-         margin: auto;
-     }
-
-     .col-md-4 p{
-         margin-left: 2%;
-         margin-right: 2%;
-     }
-
-
+.gamebuttons {
+	text-align:center;
+}
+.gamebuttons input{
+	margin: 0 5px 0 30px;
+}
+.gamebuttons label{
+	margin: 0px 20px 0px 3px;
+}
+.col-md-4, .col-dm-4{
+	margin: auto;
+}
+.col-md-4 p{
+	margin-left: 2%;
+	margin-right: 2%;
+}
 .interface{
-  width: auto;
-  padding-bottom: 100px;
-  margin: auto;
+	width: auto;
+	padding-bottom: 100px;
+	margin: auto;
 }
-
-
-
-
 .panel{
-  width: 200px;
-  height: 200px;
-  display: inline-block;
-  cursor: pointer;
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	cursor: pointer;
 }
-
 .panel:hover{
-  box-shadow: inset 0px 0px 0px 8px cyan;
-  box-sizing: border-box; 
+	box-shadow: inset 0px 0px 0px 8px cyan;
+	box-sizing: border-box;
 }
-
-
 .bottom-right-panel {
-  border-bottom-right-radius: 100%;
-  background-color: red;
+	border-bottom-right-radius: 100%;
+	background-color: red;
 }
-
 .bottom-left-panel {
-  border-bottom-left-radius: 100%;
-  background-color: blue;
+	border-bottom-left-radius: 100%;
+	background-color: blue;
 }
-
 .top-right-panel {
-  border-top-right-radius: 100%;
-  background-color: green;
+	border-top-right-radius: 100%;
+	background-color: green;
 }
-
 .top-left-panel {
-border-top-left-radius: 100%;
-  background-color: yellow;
+	border-top-left-radius: 100%;
+	background-color: yellow;
 }
-
 .flashing {
-  background-color: white !important;
+	background-color: white !important;
 }
-
-
 #startButton{
-  position: absolute;
-  height: 50px;
-  width: 200px;
-  font-size: 20px;
+	position: absolute;
+	height: 50px;
+	width: 200px;
+	font-size: 20px;
 }
-
-
-
-.rules1{
-background-color: silver;
-}
-
-.rules2{
-  background-color: snow;
-}
-
 #turn {
-  background: #330000;
-  color: red;
-  font-family: courier;
-  font-size: 20px;
-  height: 30px;
-  width: 50px;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 30px;
-  margin: auto;
+	background: black;
+	color: red;
+	font-family: courier;
+	font-size: 20px;
+	height: 30px;
+	width: 75px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 30px;
+	margin: auto;
 }
-
-.text2 {
-  font-family: 'Original Surfer', cursive;
-}
-
 footer{
-   background-color: rgb(24, 10, 10);
-  background-position: relative;
-  margin-top: -150px;
-  height: 150px;
-  width: 100%;
-  clear: both;
+	margin-top: 50px;
+	background-color:#e9ecef;
+	width: 100%;
+	padding-bottom: 25px;
 }
-
-
-  .personal-info-item {
-  margin-bottom:  0px;
-  display: block;
-  clear: both;
+.bottom-cover{
+	align-content: left;
+	padding-left: 10px;
+	position: relative;
 }
-
+.personal-info-item {
+	margin-bottom: 0px;
+	display: block;
+	clear: both;
+}
 .personal-info-item .key, .personal-info-item .value{
-  padding-right: 2px;
-  display: inline-block;
+	padding-right: 2px;
+	display: inline-block;
 }
-
 .personal-info-item .key p, .personal-info-item .value p{
-  margin: 0;
+	margin: 0;
 }
-
-
 .personal-info-item .key {
-  
-  margin-right: 2px;
-  padding-top: 2px;
-  vertical-align: top;
+	margin-right: 2px;
+	padding-top: 2px;
+	vertical-align: top;
+}
+.personal-info-item .key p h6{
+	font-weight: 700;
+}
+.personal-info-item .value a{
+	text-align: left;
+}
+@media screen and (max-width: 474px) {
+	.panel{
+		width: 150px;
+		height: 150px;
+	}
+}
+@media screen and (max-width: 368px) {
+	.panel{
+		width: 125px;
+		height: 125px;
+	}
+	.gamebuttons label {
+		padding-left: 20px;
+	}
+}
+@media screen and (max-width: 320px) {
+	.panel{
+		width: 100px;
+		height: 100px;
+	}
 }
 
-.personal-info-item .key p{
-  font-weight: 700;
-}
 
-personal-info-item .value{
-  position: relative;
-  width: 10%;
-}
