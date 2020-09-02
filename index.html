@@ -7,96 +7,76 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
   </head>
-  <body>
-  <div class="main">
-  <div class="game">
-    <div class="row">
-<div class="col-md-4">
-  <h1>Memory Game</h1>
-  <p>Hello and welcome to my memory game.Help train and develop your own skills and memory with this fun simple game.</p>
-    <hr class="lead">
-  <h2>How to Start</h2>
-  <p>To start the game use the start button and then this button will disappear and the four coloured panels and then the counter will increase to 1 and 1 panel door flash click the panel and if correct the counter will increase by 1 and that same panel will flash again with an additional one after</p>
-  <h2>What is one life</h2>
-  <p>if one life is checked that means if a colour is incorrectly clicked then the panels will flash white and round will be reset to 1</p>
-  <h2>What is Super Speed</h2>
-  <p>if Super Speed is checked that will reduce the speed of the flashes and the players flashes by half</p>
-    </div>
-  <div class="col-dm-4">
-<div class="interface">
-      <div class="text2">
-        Level
-      </div>
-      <div id="turn"></div>
-          <div class="gamebuttons">
-      <span>
-	  <label for="onelife">One Life
-       <input type="checkbox" id="onelife" name="onelife" class="onelife">
-	</label>
-	<label for="superspeed">Super Speed
-    <input type="checkbox" id="superSpeed" name="superSpeed" class="superSpeed" >
-	</label>
-    <span>
-        <div class="startButton">
-    <button type="button" id="startButton"  onclick="gamestart()">Start</button>
-    </div>
-      </div>
-    <div>
-      <div id="topLeft" onclick="this.disabled=true; flashplayer(topLeft)" class="panel top-left-panel"></div>
-      <div id="topRight" onclick="this.disabled=true; flashplayer(topRight)" class="panel top-right-panel"></div>
-    </div>
-    <div>
-      <div id="bottomLeft" onclick="this.disabled=true; flashplayer(bottomLeft)" class="panel bottom-left-panel"></div>
-      <div id="bottomRight" onclick="this.disabled=true; flashplayer(bottomRight)" class="panel bottom-right-panel"></div>
-    </div>
-    </div>
-</div>
-</div>
-  </div>
-  
-<div class="bottom-cover">
-
-    <h6>Contact Info<h6>
-      <div class="personal-info-item">
-        <div class="key">
-                <p class="uppercase">
-                  Name:
-               </p>
-          </div>
-         <div class="value">
-                <p>
-                    George Swanson
-                </p>
-         </div>
-      </div>
-
-       <div class="personal-info-item">
-        <div class="key">
-                <p class="uppercase">
-                  Send Email
-               </p>
-          </div>
-         <div class="value">
-                <p>
-                    <a href="mailto: georgeswansonwow@gmail.com" target="_blank">georgeswansonwow@gmail.com</a> 
-                </p>
-         </div>
-      </div>
-
-             <div class="personal-info-item">
-        <div class="key">
-                <p class="uppercase">
-                  Linkedin
-               </p>
-          </div>
-         <div class="value">
-                <p>
-                    <a href="https://www.linkedin.com/in/george-swanson-98a04b197/" target="_blank">george-swanson-98a04b197</a> 
-                </p>
-         </div>
-      </div>
-
-    <script src="assets/js/script.js"></script>
-  
+<body>
+	<div class="main">
+		<div class="game">
+			<div class="row">
+				<div class="col-md-4">
+					<h1>Memory Game</h1>
+					<p>Hello and welcome to my memory game.Help train and develop your own skills and memory with this fun simple game.</p>
+					<hr class="lead">
+					<h2>How to Start</h2>
+					<p>To start the game use the start button and then this button will disappear and the four coloured panels and then the counter will increase to 1 and 1 panel door flash click the panel and if correct the counter will increase by 1 and that same panel will flash again with an additional one after</p>
+					<h2>What is one life</h2>
+					<p>if one life is checked that means if a colour is incorrectly clicked then the panels will flash white and round will be reset to 1</p>
+					<h2>What is Super Speed</h2>
+					<p>if Super Speed is checked that will reduce the speed of the flashes and the players flashes by half</p>
+				</div>
+				<div class="col-dm-4">
+					<div class="interface">
+						<div class="text2">
+							Level
+						</div>
+						<div id="turn"></div>
+						<div class="gamebuttons">
+							<span><label for="onelife">One Life <input class="onelife" id="onelife" name="onelife" type="checkbox"></label> <label for="superspeed">Super Speed <input class="superSpeed" id="superSpeed" name="superSpeed" type="checkbox"></label> <span></span></span>
+							<div class="startButton">
+                                <button type="button" id="startButton"  onclick="gamestart()">Start</button>
+                            </div>
+						</div>
+						<div>
+							<div class="panel top-left-panel" id="topLeft" onclick="this.disabled=true; flashplayer(topLeft)"></div>
+							<div class="panel top-right-panel" id="topRight" onclick="this.disabled=true; flashplayer(topRight)"></div>
+						</div>
+						<div>
+							<div class="panel bottom-left-panel" id="bottomLeft" onclick="this.disabled=true; flashplayer(bottomLeft)"></div>
+							<div class="panel bottom-right-panel" id="bottomRight" onclick="this.disabled=true; flashplayer(bottomRight)"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="bottom-cover">
+			<h6>Contact Info</h6>
+			<div class="personal-info-item">
+				<div class="key">
+					<p class="uppercase">Name:</p>
+				</div>
+				<div class="value">
+					<p>George Swanson</p>
+				</div>
+			</div>
+			<div class="personal-info-item">
+				<div class="key">
+					<p class="uppercase">Send Email</p>
+				</div>
+				<div class="value">
+					<p><a href="mailto:%20georgeswansonwow@gmail.com" target="_blank">georgeswansonwow@gmail.com</a></p>
+				</div>
+			</div>
+			<div class="personal-info-item">
+				<div class="key">
+					<p class="uppercase">Linkedin</p>
+				</div>
+				<div class="value">
+					<p><a href="https://www.linkedin.com/in/george-swanson-98a04b197/" target="_blank">george-swanson-98a04b197</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="assets/js/script.js">
+	</script>
 </body>
 </html>
