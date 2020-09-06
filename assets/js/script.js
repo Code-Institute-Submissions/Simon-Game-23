@@ -40,7 +40,7 @@ function gamestart() {
     roundCounter.innerHTML = 1;
     setTimeout(function() {
         newRound();
-    }, 1000);
+    }, 800);
 };
 
 function getRandomPanel() {
@@ -48,7 +48,6 @@ function getRandomPanel() {
     return panels[Math.floor(Math.random() * panels.length)];
 }
 
-console.log(getRandomPanel())
 
 function newRound() {
     playerarr = []
@@ -95,7 +94,6 @@ function flashcomputer(element) {
     }
 }
 
-    console.log(computerarr);
 
     function flashplayer(element) {
         if (isComputerPlayingSequence == true) {
@@ -119,8 +117,6 @@ function flashcomputer(element) {
         }
     }
 
-    console.log(playerarr);
-
     function computerarrVsPlayerarr() {
         for (let i = 0; i < playerarr.length; ++i) {
             if (playerarr[i] === computerarr[i]) {
@@ -131,7 +127,7 @@ function flashcomputer(element) {
                 if (thisTheLastItem && hasThePlayerRepeatedTheWholeSequence) {
                     // set timeout so that button doesn't flash
                     // as soon as sequence is completely correct
-                    setTimeout(flahsComputerSequons, 3000)
+                    setTimeout(flahsComputerSequons, 2000)
                 }
             } else {
                 topLeft.classList.add('flashing')
@@ -172,23 +168,43 @@ function flashcomputer(element) {
 
     function flahsComputerSequons() {
         turn++;
+        if(turn == 2){
+       roundCounter.innerHTML = "Winner";
+       let i = 0
+        for (i = 0; i < 5; i++) {
+            topLeft.classList.add('flashing')
+            topRight.classList.add('flashing')
+            bottomLeft.classList.add('flashing')
+            bottomRight.classList.add('flashing')
+            setTimeout(function() {
+            topRight.classList.remove('flashing')
+            topLeft.classList.remove('flashing')
+            bottomLeft.classList.remove('flashing')
+            bottomRight.classList.remove('flashing');
+        }, 1000);
+        }
+       return;
+    }
         roundCounter.innerHTML = turn;
         let i = 0
         for (i = 0; i < computerarr.length; ++i) {
             const item = computerarr[i];
-            if (superSpeed) {
+            if (isSuperSpeed) {
                 setTimeout(function() {
                     flashButton(item)
-                }, i * 400)
-                item.classList.remove('flashing')
+                    console.log("superSpeed on")
+                }, i * 1100)
             } else {
                 setTimeout(function() {
                     flashButton(item)
-                }, i * 800)
-                item.classList.remove('flashing')
+                    console.log("superSpeed off")
+                }, i * 1500)
             }
+        } if(isSuperSpeed){
+        setTimeout(newRound, i * 1500)
+        } else {
+        setTimeout(newRound, i * 1600)
         }
-        setTimeout(newRound, i * 1100)
     }
 
         function flashButton(buttonElement) {
@@ -205,5 +221,5 @@ function flashcomputer(element) {
     }
 
 
-
     console.log(playerarr);
+    console.log(computerarr);
