@@ -6,19 +6,20 @@ html, body{
     scroll-behavior: smooth;
     height: 100%;
     min-height: 100%;
-    margin-bottom: -185px;
+    margin-bottom: 185px;
 }
 #container{
     min-height: 100%;
-    margin-bottom: -185px;
-}
-.game{
-	margin: auto;
+    margin: auto;
 	padding-top: 25px;
 	background-color:#e9ecef;
-    height: 80%;;
 	width: 87%;
     padding-bottom: 25px;
+	text-align: center;
+}
+.row{
+    height: 100%;
+    margin:0 auto;
 }
 .startButton{
 	padding-top: 50px;
@@ -26,10 +27,6 @@ html, body{
 	justify-content: center;
 	align-items: center;
 	padding-bottom: 50px;
-}
-.main{
-	overflow: auto;
-	text-align: center;
 }
 .gamebuttons {
 	text-align:center;
@@ -42,8 +39,10 @@ html, body{
 }
 .col-md-4, .col-dm-4{
 	margin: auto;
+    height: 100%;
 }
 .col-md-4 p{
+    height: 100%;
 	margin-left: 2%;
 	margin-right: 2%;
     padding-top: 25px;
@@ -60,7 +59,7 @@ html, body{
 	cursor: pointer;
 }
 .panel:hover{
-	box-shadow: inset 0px 0px 0px 8px cyan;
+	box-shadow: inset 0px 0px 0px 8px violet;
 	box-sizing: border-box;
 }
 .bottom-right-panel {
@@ -101,11 +100,13 @@ html, body{
 	margin: auto;
 }
 footer{
+    position: relative;
+    bottom: 0;
 	background-color:#e9ecef;
 	width: 100%;
     padding-top: 25px;
     padding-bottom: 25px;
-    margin-top: 25px;
+    margin-top: 150px;
 }
 .bottom-cover{
 	align-content: left;
@@ -156,5 +157,3 @@ footer{
 		height: 100px;
 	}
 }
-
-
