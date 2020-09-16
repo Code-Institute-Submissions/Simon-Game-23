@@ -3,7 +3,6 @@ let computerarr = [];
 let isSuperSpeed = false;
 let isOnelife = false;
 let isUnlimitedRounds = false;
-let round;
 let isComputerPlayingSequence = false;
 
 const topRight = document.querySelector(".top-right-panel");
@@ -58,8 +57,17 @@ function getRandomPanel() {
     return panels[Math.floor(Math.random() * panels.length)];
 }
 
+function clearPanels(){
+    topRight.classList.remove('flashing')
+    topLeft.classList.remove('flashing')
+    bottomLeft.classList.remove('flashing')
+    bottomRight.classList.remove('flashing');
+}
+
 
 function newRound() {
+    roundCounter.innerHTML = turn;
+    clearPanels()
     playerarr = []
     flashColour()
 }
@@ -90,15 +98,15 @@ function flashcomputer(element) {
     isComputerPlayingSequence = true
     let originalColor = element.style.background;
     computerarr.push(element)
-    element.style.background = 'white';
+    element.style.background == element.classList.add('flashing')
     if (isSuperSpeed == true) {
         setTimeout(function() {
-            element.style.background = originalColor;
+            clearPanels();
         }, 400);
         isComputerPlayingSequence = false
     } else {
         setTimeout(function() {
-            element.style.background = originalColor;
+            clearPanels();
         }, 800);
         isComputerPlayingSequence = false
     }
@@ -112,15 +120,15 @@ function flashplayer(element) {
         let originalColor = element.style.background;
         playerarr.push(element)
         computerarrVsPlayerarr()
-        element.style.background = 'white';
+        element.style.background == element.classList.add('flashing')
         if (isSuperSpeed == true) {
             setTimeout(function() {
-                element.style.background = originalColor;
+                clearPanels();
             }, 400);
             isComputerPlayingSequence = false
         } else {
             setTimeout(function() {
-                element.style.background = originalColor;
+                clearPanels();
             }, 800);
             isComputerPlayingSequence = false
         }
@@ -140,26 +148,24 @@ function computerarrVsPlayerarr() {
                 setTimeout(flahsComputerSequons, 2000)
             }
         } else {
+            roundCounter.innerHTML = "Incorrect";
             topLeft.classList.add('flashing')
             topRight.classList.add('flashing')
             bottomLeft.classList.add('flashing')
             bottomRight.classList.add('flashing')
             setTimeout(function() {
-                topRight.classList.remove('flashing')
-                topLeft.classList.remove('flashing')
-                bottomLeft.classList.remove('flashing')
-                bottomRight.classList.remove('flashing');
+                clearPanels()
             }, 1000);
             if (isOnelife == true) {
                 computerarr = [];
                 turn = 1;
-                roundCounter.innerHTML = turn;
                 setTimeout(function() {
                     newRound();
-                }, 3000);
-                round = 0;
+                }, 2000);
             } else {
                 setTimeout(function() {
+                    clearPanels()
+                    roundCounter.innerHTML = turn;
                     playerarr = [];
                     let i = 0
                     for (i = 0; i < computerarr.length; ++i) {
@@ -177,23 +183,25 @@ function computerarrVsPlayerarr() {
 
 function flahsComputerSequons() {
     turn++;
-    if (turn == 21 && isUnlimitedRounds == false) {
+       if (turn == 21 && isUnlimitedRounds == false) {
         roundCounter.innerHTML = "Winner";
         let x = 0
         for (x = 0; x < 5; x++) {
-            topLeft.classList.add('flashing')
-            topRight.classList.add('flashing')
-            bottomLeft.classList.add('flashing')
-            bottomRight.classList.add('flashing')
-            setTimeout(function() {
-                topRight.classList.remove('flashing')
-                topLeft.classList.remove('flashing')
-                bottomLeft.classList.remove('flashing')
-                bottomRight.classList.remove('flashing');
-            }, 1000);
-            return;
+            setTimeout(function () {
+                topLeft.classList.add('flashing')
+                topRight.classList.add('flashing')
+                bottomLeft.classList.add('flashing')
+                bottomRight.classList.add('flashing')
+                console.log("flashing")
+                setTimeout(function() {
+                    clearPanels()
+                    console.log("nonflashing")
+                }, 800);
+            }, x * 1000)
         }
+        return;
     }
+
     roundCounter.innerHTML = turn;
     let i = 0
     for (i = 0; i < computerarr.length; ++i) {
