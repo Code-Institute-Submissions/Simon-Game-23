@@ -1,5 +1,12 @@
 Hello all and welcome to my version of the Simon game
 
+Repository Link
+Click the link below for the project:
+
+site repository https://e62ec557-ab89-4b53-984f-2a463e51212f.ws-eu01.gitpod.io/#/workspace/Simon-Game
+
+published site at https://effull.github.io/Simon-Game/
+
 The goal of the game Simon is to remember and reproduce a sequence of panels/colours progressively increasing in difficulty after the correct sequence has been reproduce.    
 
 Please see the Wikipedia page for more define rules of the Simon game.
@@ -148,15 +155,6 @@ The full-screen hero image code came from this StackOverflow post
 Bootstrap4: Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 
 MDN Web Docs : For Pattern Validation code. Code was modified to better fit my needs and to match an Irish phone number layout to ensure correct validation. Tutorial Found Here
-
-
-
-Repository Link
-Click the link below for the project:
-
-site repository https://e62ec557-ab89-4b53-984f-2a463e51212f.ws-eu01.gitpod.io/#/workspace/Simon-Game
-
-published site at https://effull.github.io/Simon-Game/
 
 Credits
 Content
