@@ -3,218 +3,167 @@ Hello all and welcome to my version of the Simon game
 The goal of the game Simon is to remember and reproduce a sequence of panels/colours progressively increasing in difficulty after the correct sequence has been reproduce.    
 
 Please see the Wikipedia page for more define rules of the Simon game.
+https://en.wikipedia.org/wiki/Simon_(game) 
 
-I choose this project for the Interactive Frontend Development project. The project scope was to create the game using HTML, CSS and JavaScript and# due to the simple yet functional uses needed of JavaScript.
+I chose this project for the Interactive Frontend Development project. The project scope was to create the game using HTML, CSS and JavaScript. due to the simple yet functional uses needed of JavaScript in this project.
 
-There were 2 options to pick from and even throw I did struggled throw the JavaScript lessons I wanted to pick the Simon game as I believe the fundamentals of JavaScript needed for it will help with grasp the basics of JavaScript and how they are used in a full project.
+There were 2 options to pick from and even throw I did struggle throw the JavaScript lessons I wanted to pick the Simon game as I believe the fundamentals of JavaScript needed for it will help with grasp the basics of JavaScript and how they are used in a full project.
 
 UX
 User Stories
+First interactions with site
+I want a simple layout which is easy to understand and navigate
+I want simple colour and fonts to provide a focus on the game
+I want simple and descriptive description of how the games played
+I want to be able to play the game easily
+
+Experience / Frequent user
+Fast way to start the game
+Easy way to increase the difficulty of the game
+A simple focus on the game
+
+Developer goals
 I want a random selection of colours/panels to be highlighted,
 I want the same series of colours/panels to be highlighted again in the next round, but with an additional colour/panel added to the sequence,
 If I press the wrong colour/panel in the sequence I want to be notified of this and the random sequence to be repeated and after this has been competed I will be allowed to try again,
-I want a counter showing the number of colures/panels that will need to be selected in the round and this to be shown as the game level,
-I want a ‘perfect-run’ option, which dose not allow any incorrect colours/panels to be selected or the game resets the sequence,
+I want a counter showing the number of panels that will need to be selected in the round and this to be shown as the game level,
+I want a ‘One Life’ option, which does not allow any incorrect panels to be selected or the game resets to the beginning,
 I want a ‘super-speed’ option which increases the speed of highlighting the colours/panels in the sequence,
 I want a ‘unlimited-rounds’ option which allows that game sequence to go on,
-I want to be notified when I have compiled all set round in the sequence,
-I want a ‘reset mods’ which resets the page to with the latest check boxes
+I want to be notified when I have compiled all set round in the sequence
+
+Design
+Colour and font styling
+ace a light silver play area and font which allows the colours to be bold and seen and also allows the wait to be seen as well when flashing that is a white outer Edge just to have a border around to make it look a bit symmetrical
+Typography
+the Bold simple font in Black with the enlarge headers gives it a clear easy-to-read style which also does not distract attention when playing the game
+Imagery
+apart from the backgrounds and the game there is no distractions just to give full focus to it
+
 
 Research
 To see the different styles and functionality I had a look at some of the existing types of the Simon games and also some of the tutorials on how to build a Simon game which give me some understanding and insight into what I could implement with my Simon game.
 
-Looking at the most of the Simon game the controls and level counters seem to be in the centre of the colours/panels which seemed to slow down the pace at some pointes of the game and could affect the ‘super-speed’ option which is my (UI) design dose not match the original Simon game.
+Looking at the most of the Simon game the controls and level counters seem to be in the centre of the colours/panels which seemed to slow down the pace at some points of the game and could affect the ‘super-speed’ option which is my (UI) design dose not match the original Simon game.
 
 Style Rationale
-
 I have chosen to keep the style of my webpage simple and to allow the options to be selected before the game to simplify it for the end users I want the page to be simple and clean reduces and confuse or errors when playing the game.
 
 Features
 
 Functionality
-a randomly generated sequence of colours/panels will be show to the user.
-
-The user is the required to repeat the random sequence of colours/panels in the same order as deployed to them be clicking on the relevant colours/panels (this can be done with a cursor on laptop/desktop devices, or a finger/thumb on touch devices. A valid user input initiates the next round where the same sequence is replayed, but with an additional step.)
-
-When users click/press on any colours/panels, they will see a light colour fill the selected colours/panels that confirms the click/press. Users will only be able to click/press the colours/panels when the randomly generated sequence is finished. The colours/panels are disabled when the sequence is playing.
-If a user inputs the wrong sequence, a notification by all the colours/panels lighting up with a text message will appear in the display area, after which the previous sequence replays and allows the user to try again. ‘perfect-run’ does not allow mistakes, if a mistake is made the user will be presented a notification with all the colours/panels lighting up with a text message will appear in the display area. The will then game restart. ‘super-speed’ reduces the time between colours/panels lighting up. ‘unlimited-rounds’ will unlimited the set number of rounds the user can play.
-
+A randomly generated sequence of colours/panels will be show to the user.
+The user is the required to repeat the random sequence of colours/panels in the same order as displayed to them on screen by clicking on the relevant colours/panels (this can be done with a cursor on laptop/desktop devices, or a finger/thumb on touch devices) to proceed to the next level. A valid user input initiates the next round where the same sequence is replayed with an additional colours/panels add to the sequence.
+When users click/press on any colours/panels, they will see the panels colour change to white and then back to the original colour that confirms the click/press on that colours/panels. 
+If a user inputs the wrong sequence, a notification by all the colours/panels lighting up with a text message will appear in the level counter, after which the previous sequence replays and the user will be able to try again unless ‘One Life’ is checked then the game will reset to the beginning. ‘super-speed’ reduces the time between colours/panels lighting up. ‘unlimited-rounds’ will unlimited the set number of rounds the user can play.
 The round number is the indication of how long the sequence is.
+If the game is “failed” then the game will autumnally reset its-self and will indicate with a flashing of all colours/panels and reset according to whether ‘One Life’ is enabled
+A user can play with no modifications/add-ons, in which a new step in the random sequence will be added every 800 milliseconds. The user can also play in 'super-speed’, in which the time between each step in a sequence will be every 400 milliseconds. ‘One Life’ & ‘unlimited-rounds’ are all compatible with each mode.
 
-If a game is “failed” then the game will autumnally reset its-self and will indicate with a flashing of all colours but if the user wants to update the game modifiers then a user can click the ‘reset mods’ button to do so.
-
-A user can play with no modifications/add-ons, in which a new step in the random sequence will be added every 800 milliseconds. The user can also play in 'super-speed’, in which the time between each step in a sequence will be every 400 milliseconds. ' perfect-run’ & ‘unlimited-rounds’ are all compatible with each mode.
-
-When the user successfully repeats the sequences correctly 20 times that means that the user has won the game (unless in ‘unlimited-rounds’ mode). When this happens, the colours/panels will continuously flash and a message will say 'YOU WIN!' in the display area. Then if nether the 'perfect-run’ or 'super-speed’ are on during this game the user will then receive another message 'do you want more of a challenge why not try the 'perfect-run’ and the 'super-speed’ game mode maybe together if you can?' the ‘reset mods’ button will be in the pop up box to let user rest the game.
+When the user successfully repeats the sequences correctly 20 times that means that the user has won the game (unless in ‘unlimited-rounds’ mode). When this happens, the colours/panels will flash 5 times and a message will say 'Winner’ in the level counter. 
 
 
 Existing Features
 Game Controls
-Header Logo - Users are able to click the Simon logo in the header, which reloads the webpage/app.
-"?" Icon - Users are able to click the "?" icon in the header, which loads a modal.
-Modal - The modal is triggered by the "?" icon, and it allows users to read the instructions for how to operate the game.
-Volume icon - Users are able to click the volume icon in the header, which toggles the sound on and off. The icon also changes depending on the toggle state.
-On/Off Button - Users can toggle the On/Off button to switch the power on or off. When the power is on, css is used to highlight this button, the board activates and the text is displayed in the other buttons. When the power is off, this button returns to its default state, the board deactivates and the text in the other buttons is hidden. If 'Hard' and/or 'Strict' mode is on, these are toggled to off when the game is powered off. This gives the user a clear visual indication of when the game is on or off.
-Hard Button - Users can toggle the Hard button to turn 'Hard mode' on or off. When 'Hard mode' is on, css is used to highlight this button. When 'Hard mode' is off, this button returns to its default state. If 'Hard mode' is on, this is automatically turned off when the game is powered off. This gives the user a clear visual indication of when 'Hard mode' is on or off.
-Strict Button - Users can toggle the Strict button to turn 'Strict mode' on or off. When 'Strict mode' is on, css is used to highlight this button. When 'Strict mode' is off, this button returns to its default state. If 'Strict mode' is on, this is automatically turned off when the game is powered off. This gives the user a clear visual indication of when 'Strict mode' is on or off.
-Start/Reset Button - Users can click the Start button to start the game. During gameplay, this button changes to a Reset button and the text in it changes to 'RESET' to alert users of this. When the gameplay is over, the text in the button changes back to 'START'.
-Display Area - The area below the control buttons is a text display area. Before gameplay, the text in this area displays 'ROUND --' and 'PRESS START'. During gameplay, the text displays the round number and tells users whether to 'WATCH...' (CPU's turn) or 'GO...' (user's turn). If users enter the wrong sequence, the text changes to 'WRONG' and 'TRY AGAIN!'. If users lose the game, the text changes to 'WRONG' and 'YOU LOSE', and then 'YOU LOSE!' and 'PRESS START' after 1 second. If users win the game, the text changes to 'YOU WIN!' and 'PRESS START'. This improves UX and provides visual cues for users.
-Game Buttons - There are four game buttons, all different colors. Users press these buttons on their turn to repeat the sequence that the CPU displayed. The lights flash when they are active, either during the CPU's turn, or when clicked by the user. These buttons are only enabled during the user's turn, and are disabled at all other times, which prevents users from clicking these buttons when they aren't supposed to. During the user's turn, when the user clicks a game button, all game buttons are disabled for the subsequent 300 millisecond period, which prevents users from clicking the buttons too quickly. After this time, the buttons are enabled again if it is still the user's turn.
-Footer Link - Users can click the link, which is my name. Upon clicking the link, users are directed to my GitHub profile, which loads in a new browser tab.
-Feedback modal - When users lose the game, a pop up modal is displayed, which shows users the last round that they reached before losing the game, and it instructs users to press 'START' to try again. Users will need to close the alert modal and manually press 'START' to start a new game. When users win the game, a pop up modal is displayed which congratulates users and tells them that they're awesome, and it instructs users to press 'START' to start a new game. Users will need to close the alert modal and manually press 'START' to start a new game.
+One Life - is a checkbox and if checked and an error is made in the sequence of panels compared to the computer after all of the panels flash indicating an error then instead of the sequence being repeated then the game level will be reset to one and one panel will flash resetting the game.
+Super Speed - is a checkbox and if checked then this will reduce the time of flashing from 800 milliseconds to 400 milliseconds when the player clicks the panel and when the panel flashes in the sequence
+Unlimited Rounds - is a checkbox and if checked then instead of the game ending then the level counter goes past 20 it will continue on until the player stops
+Start Button - this brings up all of the panels, level counter and change the level counter to one and flash a panel to begin the game this will also move the webpage to location of the panels
+Level Counter – the black box above the panels and below the checkboxes will appear when the start button is pressed and will display one and increase when a Level is completed correctly  if the round has increased past 20 and ‘Unlimited Rounds’ is not checked then it will display Winner also if ‘One Life’ is checked and an error is made on any other round except 1 then the counter will always reset to 1.
+Coloured Panels - There are four coloured Panels, which are green blue yellow and red. These can change colour to white either by the computer or the player. The computer can change the colour of the panels when displaying the sequence needed to complete the turn, if the player dose not match the computer sequence all the panels will change to white indicating an error and if ‘Unlimited Rounds’ is not on then after the game level goes past twenty then all the panels will change to white repeatedly for five times.
+Footer Link - I have a link to directly link to my email and a link to my LinkedIn profile for my contact details.
+
+
+
+
+
+
+
 Modes
-Default Mode - The lights flash in a specific sequence, every 800 milliseconds. The sequence repeats and a new step is added to the sequence with each round, which makes the game progressively difficult. If users make one mistake, the previous pattern is repeated, giving them another chance to get it right. If users make a second mistake, they are presented with a pop up modal, which tells them that they lost the game, the last round that they reached, and instructs them to press 'START' to try again.
-Hard Mode - This mode is the same as 'Default Mode', with the difference being the time between the light flashes on the CPU's turn. In rounds 1 to 4, the lights flash every 800 milliseconds. In rounds 5 to 9, the lights flash every 640 milliseconds. In rounds 10 to 14, the lights flash every 520 milliseconds. In rounds 15 to 20, the lights flash every 400 milliseconds. This makes the game even harder than the 'Default Mode' as the rounds progress.
-Strict Mode - This mode allows no mistakes from users. Regardless of which round the game had progressed to, if users make a mistake, they are presented with a pop up modal, which tells them that they lost the game, the last round that they reached, and instructs them to press 'START' to try again.
-Legendary Mode - This mode is activated when the user turns both 'Hard Mode' and 'Strict Mode' on, making the game faster and harder as the rounds progress, and doesn't allow users to make a mistake.
-Incorrect Entry - In addition to the text change in the display area (explained in the previous section), all game buttons flash to provide users with an additional visual aid to let them know that they've made a mistake.
-Lose Game - In addition to the text change in the display area and the pop up modal (explained in the previous section), all game buttons flash to provide the user with an additional visual aid to let them know that they've lost the game.
-Win Game - In addition to the text change in the display area (explained in the previous section), all game buttons light up to provide the user with an additional visual aid to let them know that they've won the game. The lights stay lit until the user presses 'START' to start a new game.
-Features Left to Implement
-Leaderboard - Once I learn back-end development, I would like to implement a high score leaderboard for users who have played my game. This would require asking the user to enter their name before they are able to play the game, which is then stored in a back-end database, along with the highest round that they reached.
-Online play - When I have the skillset, I would like to implement an online mode where users can compete against other users.
-Pause - I would like to introduce a pause function, which allows users to pause the game.
+Standard - with none of the checkboxes checked then when the Start Button is pressed a panel will change to white randomly for 800 milliseconds then change back to the original colour if the player clicks the same panel that flashed then the game level will change to two and the original panel from before will flash again at 800 milliseconds and then an additional random panel will flash for 800 milliseconds and then change back to the original colour this will continue on with adding another random panel on to the sequence as long as the player can repeat the computer sequence in order this will continue until the level counter reaches 20 then ones this round is completed then all the panels will change to white for 800 milliseconds and then back to the original colour for 800 milliseconds this will repeat five times whilst the level counter displays ‘Winner’.
+Super Speed – If this checkbox is checked the change to white will decrease for 800 milliseconds to 400 milliseconds when the when the computer is flashing the first random panel change, when the player clicks a panel and when the sequence is being repeated.
+One Life - If this checkbox is checked and the player dose not repeat the computer sequence correctly all the panels will change to white for 800 milliseconds indicating an error and the level counter will change to one and then a new random panel will flash while resting the game.
+Unlimited Rounds - If this checkbox is checked instead of the game stopping at level 21 the rounds will continue on and will only stop when then the player stopes.
+Incorrect Entry – If the player cannot match the same pattern as the computer there will be an indication in all of the panels flashing for 800 milliseconds with an post in the level counter saying incorrect and then return back to the original colours and then either repeat the sequence or restart and flash one panel.  
+Completed Game – This can only be done if the checkbox for unlimited round is not checked when the game level goes past 20 all the panels will flash 5 times and display a message of winner in the level counter
+
+
+
+
+
+
+
+
+
+
+
+
 Technologies Used
-Balsamiq
-I've used Balsamiq to create wireframes of my website/app before building it.
-HTML
-The project uses HTML to create the basic elements and content of my game.
-SCSS
-The project uses SCSS to add custom styles to the elements and content of my game. I used SCSS instead of CSS, as it is more powerful and I used the logic to write some variables and mixins, which I called for my fonts and button styles.
-CSS
-The project uses CSS to apply the custom styles created with SCSS to my game. The index.html file is linked directly to the main.css stylesheet.
 Bootstrap
-The project uses the Bootstrap framework to add a responsive grid system, prebuilt components, plugins built on jQuery, and Bootstrap styles to my game, before adding my custom styles.
+I use bootstrap to create a two-column interface which split the game up and the rules/how to play
+HTML
+the HTML was very simple because I wanted the page to be simple and mostly focus on the game and information used simple colours, tones and font.
+CSS
+the CSS provides the simple colours, tones, font and also provides the flashing function for the JavaScript.
 JavaScript
-The project uses JavaScript from my custom script.js file to add functionality and interactivity to my game. This is the core focus of this project. The project also uses JavaScript from Bootstrap which is required to add functionality to the Bootstrap modal.
+this provides the entire game function with using the CSS styles to flash the panels and making the checkboxes from the HTML function to impact the games functions.
 jQuery
 The project uses jQuery to simplify DOM manipulation. This is both the standard jQuery that is built with Bootstrap components, and my custom jQuery used in my script.js file.
-Google Fonts
-The project uses Google Fonts to style the text and suit my chosen theme.
-Font Awesome
-The project uses Font Awesome for the instructions and sound icons in the header of my game website/app.
-Cloud9
-I've used Cloud9 as the development environment to write the code for my website.
-Jasmine
-The project uses Test Driven Development (TDD) using the Jasmine framework to automate some testing of my JavaScript code.
-Version Control
-Git
-I've used Git as a version control system to regularly add and commit changes made to project in Cloud9, before pushing them to GitHub.
-GitHub
-I've used GitHub as a remote repository to push and store the committed changes to my project from Git. I've also used GitHub pages to deploy my website/app in a live environment.
+Gitpod
+This was the predominant development tool to see my website whilst coding
+Github
+I use Github for version controls and to previous versions to fix whenever I made an experimental error
 Testing
 Testing User Stories
 I used my user stories and documented each of the steps that each user would need to complete to accomplish what they have stated. Below is the link to the document that contains this information:
 
 Testing User Stories
-Automated Testing
-I tested some of my functions with Jasmine after completing the majority of my JavaScript code. As I was completely new to JavaScript and Jasmine at the beginning of this project, I wasn't able to write TDD tests and my JavaScript code simultaneously. Therefore, I focussed on writing the code for my project first and then tackled the TDD afterwards. I also only tested some of my functions, and not all, as I didn't want to spend too much time on this by using it to test all my functions.
+Manual Testing
+Due to my inexperience with both JavaScript and Jasmine and the time and difficulty taken to just complete the JavaScript all of the testing was done manually by trial and error and user experience I will need to develop on my Jasmine skills to have automated testing.
 
-Now that I have a working knowledge of TDD using Jasmine and a more in depth knowledge of JavaScript, I will try to build my testing suite and write my JavaScript code simultaneously going forward.
 
-I imported the Jasmine-jQuery CDN into the Jasmine testing boilerplate to ensure it was compatible with jQuery.
 
-The links to my Jasmine testing suite files are below:
 
-HTML test page to run tests from - indexTesting.html
-Jasmine JavaScript testing suite - spec.js
-JavaScript file to be tested - script.js
-Run Jasmine Tests
-Once you've cloned my project by following the instructions in the Deployment - Running Code Locally section below, you can run the Jasmine tests by completing the following steps:
-
-Open the indexTesting.html file.
-Run the file to view the results in your browser.
-Create Jasmine Tests
-Once you have my project running locally, you can create your own Jasmine tests by completing the following steps:
-
-Open the script.js to view the existing code for my project.
-Open the spec.js file.
-Write your own tests using the Jasmine 3.3.0 framework.
-Save the spec.js file.
-Run or refresh the indexTesting.html.
 Responsive Testing
-I used Google Chrome's Development tools to constantly test each change that I made to my project and to ensure that it appeared in the desired way on different screen sizes. I also tested my game on different screen sizes (mobile, tablet and desktop) to ensure it appeared in the desired way on different devices.
+to physically test the game, I use the Google web Dev tools to monitor console logs changes to the starlings of the HTML and monitoring changes in code and how it affected the overall game and constantly playing through and checking what the changes worked
+when going through the different scaling sizes for different devices developing the website on a laptop and a desktop which gave me a good difference between the two and because the design is very simple implementing at for mobile was not necessarily difficult especially with the talk with the mentor explaining beneficial styles for that platform
 
-To test my whole game (aspects that weren't automated), I went through each feature and documented the results on a spreadsheet. The spreadsheet also documents any responsive features and confirms that they work and appear as intended on different screen sizes. The link to the spreadsheet it below:
+HTML
+there was a difficulty making sure that the fitter would stay in place and scaling the back ground correctly this was noticed by using different platforms and scaling Tools on Google
+currently when the Vue at the screen reaches 530 pixels wide the text will straight down ready for when the text needs to come above the game but the text is still shrunk to a size where it could be side to side with the panels
+JavaScript
+was going through I made sure that all of the features could work together by manipulating the round ending level to speed up the game and see different colours flash together
+one of the notices points I found was colours could not flash together due to the time that I had for delays both with superspeed and as standard game so also adjusted to add a difference between New round starting with both of these to stop panels not flashing together and reduced double flashing problems.
+also the initial flash was causing issues if a player would double click on a panel as it was not using the style tack of flashing it was just changing the panel to White so even if I use the function clear panels this would not affect it causing the game basically be unplayable so change the styling and also added clear panels throw a couple of functions through the game to reduce this and to only use one CSS element to change the colours of the panels and if a panel ever gets stuck on flashing then it will always clear correctly.
+there were difficulties with the fast updating tag names for the checkboxes and not allowing the functions to correctly do the if statements later on in the game 
+when developing the flashes throughout all of the panels the initial flash on the panel was simple to do with the just changing the style of 1 known panel and also to change the style of a panel Flash by the player with using for Loops too run through the arrays of the computer panel and applying the style individually allowed both a consistent checking point and also good timing changes to allowance superspeed to be implemented simply
 
-Testing Checklist
-Additional Testing
-In addition to my own testing, I also asked family members, friends and the Slack community to test my game and provide any feedback.
+most of the checkboxes are used in a similar fashion to show true or false depending on the checkboxes which also allowed easy implementation for all of them especially as the initial code was developed before the checkboxes were made
 
-HTML and CSS Validation
-I used the W3C HTML Validator tool to validate my HTML code.
-I used the W3C CSS Validator tool to validate my CSS code.
-I used the Esprima Syntax Validator tool to validate my JavaScript syntax.
-Interesting Bugs Or Problems
-CPU sequence wasn't playing - The automated CPU sequence wasn't playing. I spent some time trying to debug this and ultimately asked for help on the Slack community and was signposted to a Debugging video by @Anna_lead. After watching this video, I managed to used the Chrome debugger tool to identify the bug, which was a missing semicolon in one of the functions. This took me around 5 hours to debug, but I was able to ultimately resolve it myself, and I learnt how to use the Chrome debugger tool in the process.
-Too many start button presses - If the 'START'/'RESET' button was pressed too many times in very quick succesion, it caused the game to break, and a refresh would be required to reload the game. To fix this bug, I used the setTimeout function to disable this button for 1 second after it was clicked, before enabling it again. This ensured that the game had a chance to start or reset before users could press the button again, ensuring the game ran smoothly.
-Changing modes during CPU sequence - Changing game modes or restarting the game while the CPU sequence played caused the game to break, and a refresh would be required to reload the game. To fix this bug, I used the power = false; statement to effectively disable the game control buttons while the CPU sequence played. While this fixes the bug, this requires users to wait until the CPU sequence has finished playing before they can use these buttons again.
-Quick button presses - During the user's turn to enter the sequence, users were able to repeatedly press the same game button in quick succession, which broke the game. To combat this, I disabled the game button for 300 milliseconds after users clicked/pressed it, to minimize the risk of them breaking the game.
-Classes not being added - As part of my UX consideration, I have amended the CSS for the control buttons so that the colors are inverted when the buttons are in an active state. I initially tried to do this by using the .addClass() method in jQuery. However, although the classes were being added, the visual effects weren't updating in the game. I resolved this by using the .css() method in my script.js to directly amend the styles for the buttons, which resolved the bug.
-Too many game button presses - After the last button press in a particular sequence, the game buttons are enabled for a short period of time after the 300 millisecond period that they are disabled for, before the next round initiates. This means that there is a small window of opportunity for users to click a game button, which registers an additional button press in that particular sequence. If this is done, it causes the game to break. Trying to resolve this bug was time consuming and I also noticed that this was an issue on the other renditions of the game that I played while conducting my research. Therefore, for the scope of this project, I left it unresolved so that I didn't spend too much time on it.
-Game button sounds - Sometimes, the sounds don't always play when the corresponding game buttons flash, which is more noticeable on mobiles. I included a function to reset the audio clip to 0 seconds and restart it if the sound is already playing, in an attempt to resolve the sound issue. However, this didn't seem to resolve the issue. Again, trying to resolve this bug was time consuming and I also noticed that this was an issue on the other renditions of the game that I played while conducting my research. Therefore, for the scope of this project, I left it unresolved so that I didn't spend too much time on it.
-Deployment
-The hosting platform that I've used for my project is GitHub Pages. To deploy my website to GitHub pages, I used the following steps:
 
-Loaded the terminal window in my Cloud9 workspace.
+Credits
+Code
+The full-screen hero image code came from this StackOverflow post
 
-Initialised Git using the git init command.
+Bootstrap4: Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 
-Added all files to the Staging area (Git) using the git add . command.
+MDN Web Docs : For Pattern Validation code. Code was modified to better fit my needs and to match an Irish phone number layout to ensure correct validation. Tutorial Found Here
 
-Committed the files to Git using the git commit -m "Initial commit" command.
 
-Created a new repository in GitHub called 'monkees-milestone-project-one'.
-
-Copied the below code from GitHub into the terminal window in my Cloud9 workspace:
-
-git remote add origin https://github.com/hebs87/simon-milestone-project-two.git
-
-git push -u origin master
-
-Entered my GitHub username and password to push the files from Git to GitHub.
-
-Went into 'Settings' on my repository page in GitHub.
-
-Selected the 'master branch' option under the 'GitHub Pages' section.
-
-Ran several regular commits throughout my project.
 
 Repository Link
-Click the link below to run my project in the live environment:
+Click the link below for the project:
 
-Simon Game
+site repository https://e62ec557-ab89-4b53-984f-2a463e51212f.ws-eu01.gitpod.io/#/workspace/Simon-Game
 
-Running Code Locally
-To run my code locally, users can download a local copy of my code to their desktop by completing the following steps:
-
-Go to my GitHub repository.
-
-Click on 'Clone or download' under the repository name.
-
-Copy the clone URL for the repository in the 'Clone with HTTPs section'.
-
-Open 'Git Bash' in your local IDE.
-
-Change the current working directory to the location where you want the cloned directory to be made.
-
-Type git clone, then paste the URL you copied in Step 3:
-
-git clone https://github.com/USERNAME/REPOSITORY
-
-Press Enter to complete the process and create a your local clone.
+published site at https://effull.github.io/Simon-Game/
 
 Credits
 Content
 All of the code for my project was written by me.
-I watched the Simon Game JavaScript Tutorial for Beginners video before starting my project to gain an understanding of the type of functions that I needed to include in my script.js file to ensure the game's functionality.
-Media
-Sounds
-Game Button Sounds - I got the sounds for the game buttons from Free Code Camp, and assigned the url link to the relevant button in my script.js file.
-Game Sounds - I downloaded the sounds for the game sounds and button clicks from Zapsplat and imported them into my workspace. I then created variables for these sound files in my script.js file.
+I did watch multiple tutorials online and written content to figure out the best way to go about the project
 Acknowledgements
-I received inspiration for this project from searching for Simon games in Google and testing several of the renditions that were shown in the search results.
-Thanks to the Slack community for their feedback, and for pointing me in the right direction of how to debug my JavaScript code.
-A special mention to my mentor, Dick Vlaanderen, for his feedback on my project's scope, design and functionality, and for hints on what information to include in my README.md file to justify my stylistic choices and project choice.
-Disclaimer
-This project is for educational purposes only.
+I received inspiration for this project from youtube and Google with testing to see how best to start my project.
+I use the styling from my initial master and project to build the footer
+I also received help from student care for my JavaScript code.
+
