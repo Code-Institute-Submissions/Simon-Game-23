@@ -1,9 +1,6 @@
 Hello all and welcome to my version of the Simon game
 
 Repository Link
-Click the link below for the project:
-
-site repository https://e62ec557-ab89-4b53-984f-2a463e51212f.ws-eu01.gitpod.io/#/workspace/Simon-Game
 
 published site at https://effull.github.io/Simon-Game/
 
