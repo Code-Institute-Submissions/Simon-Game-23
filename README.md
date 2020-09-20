@@ -110,32 +110,17 @@ Desktop view
 ### Desktop view
 ![Desktop-view.png](https://github.com/Effull/Simon-Game/blob/master/assets/img/Desktop-view.png)
  
-
 ### Top of page tablet and phone view
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
-
-
-
-
-
+![Top-page-tablet.png](https://github.com/Effull/Simon-Game/blob/master/assets/img/Top-page-tablet.png)
+![Top-page-phone.png](https://github.com/Effull/Simon-Game/blob/master/assets/img/Top-page-phone.png)
 
 ### Middle of the page tablet and phone view 
-(https://octodex.github.com/Effull/Simon-Game/blob/master/assets/img/Middle-page-tablet.png)
-![Image of Yaktocat]
-(https://github.com/Effull/Simon-Game/blob/master/assets/img/Middle-page-phone.png)
-
-
-
+![Middle-page-tablet.png](https://github.com/Effull/Simon-Game/blob/master/assets/img/Middle-page-tablet.png)
+![Middle-page-phone.png](https://github.com/Effull/Simon-Game/blob/master/assets/img/Middle-page-phone.png)
 
 ### Game view with tablet and phone 
-![Image of Yaktocat]
-https://github.com/Effull/Simon-Game/blob/master/assets/img/Game-view-tablet.png
-![Image of Yaktocat]
-https://github.com/Effull/Simon-Game/blob/master/assets/img/Game-view-phone.png
-
-
-
-  
+![Game-view-tablet.png](https://github.com/Effull/Simon-Game/blob/master/assets/img/Game-view-tablet.png)
+![Game-view-phone.png](https://github.com/Effull/Simon-Game/blob/master/assets/img/Game-view-phone.png)
 
 these were resized and crop from the page so not to scale
 
