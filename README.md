@@ -106,6 +106,10 @@ When the user successfully repeats the sequences correctly 20 times that means t
 these were some of the original designs of what I wanted to say to be on Balsamiq this was updated slightly when talking to my mentor who is suggested to move the rules page into the game page and shorten them up
 Desktop view
  
+ 
+### Desktop view
+![Desktop-view.png](https://github.com/Effull/Simon-Game/blob/master/assets/img/Desktop-view.png)
+ 
 
 ### Top of page tablet and phone view
 ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
