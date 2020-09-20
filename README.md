@@ -58,7 +58,7 @@ Looking at the most of the Simon game the controls and level counters seem to be
 ### Style Rationale
 I have chosen to keep the style of my webpage simple and to allow the options to be selected before the game to simplify it for the end users I want the page to be clean and straightforward reduces and confuse or errors when playing the game.
 
-#Features
+# Features
 
 ## Functionality
 
@@ -108,8 +108,7 @@ Desktop view
  
 
 ### Top of page tablet and phone view
-![Image of Yaktocat]
-(https://(https://octodex.github.com/Effull/Simon-Game/blob/master/assets/img/Desktop-view.png)
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 
 
