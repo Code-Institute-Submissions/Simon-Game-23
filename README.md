@@ -108,7 +108,7 @@ Desktop view
  
 
 ### Top of page tablet and phone view
-
+![Image of Yaktocat]
 (https://github.com/Effull/Simon-Game/blob/master/assets/img/Desktop-view.png)
 
 
@@ -117,14 +117,18 @@ Desktop view
 
 
 ### Middle of the page tablet and phone view 
+![Image of Yaktocat]
 (https://github.com/Effull/Simon-Game/blob/master/assets/img/Middle-page-tablet.png)
+![Image of Yaktocat]
 (https://github.com/Effull/Simon-Game/blob/master/assets/img/Middle-page-phone.png)
 
 
 
 
 ### Game view with tablet and phone 
+![Image of Yaktocat]
 https://github.com/Effull/Simon-Game/blob/master/assets/img/Game-view-tablet.png
+![Image of Yaktocat]
 https://github.com/Effull/Simon-Game/blob/master/assets/img/Game-view-phone.png
 
 
