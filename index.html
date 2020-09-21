@@ -1,87 +1,94 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>repl.it</title>
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-  </head>
-<body>
-<div id="container">
-		<div class="row">
-			<div class="col-md-4">
-				<h1>Memory Game</h1>
-				<p>Hello and welcome to my memory game.Help train and develop your own skills and memory with this fun simple game.</p>
-				<hr class="lead">
-				<h2>How to Start</h2>
-				<p>To start the game use the start button and then this button will disappear and the four coloured panels will appear and then the counter will increase to 1 and one panel will flash once it the panel is the original colour click the panel and if correct the counter will increase by 1 and that same panel will flash again with an additional one after it untill the counter is at 20 which is the last round</p>
-				<h2>What is one life</h2>
-				<p>if one life is checked that means if a colour is incorrectly clicked then the panels will flash white and round will be reset to 1</p>
-				<h2>What is Super Speed</h2>
-				<p>if Super Speed is checked that will reduce the speed of the flashes and the players flashes by half</p>
-                <h2>What is Unlimited Rounds</h2>
-				<p>if Unlimited Rounds is checked that will increase the final round from 20 to unlimited</p>
-                <p>all buttons can be turned on and off at any point and also can be put all on together</p>
-			</div>
-			<div class="col-dm-4">
-				<div class="interface">
-					<div class="leveltext">
-						Level
-					</div>
-					<div id="turn"></div>
-					<div class="gamebuttons">
-						<span>
-                            <label for="onelife">One Life <input class="onelife" id="onelife" name="onelife" type="checkbox"></label>
-                            <label for="superspeed">Super Speed <input class="superSpeed" id="superSpeed" name="superSpeed" type="checkbox"></label>
-                            <label for="unlimitedRounds">unlimited-rounds <input class="unlimitedRounds" id="unlimitedRounds" name="unlimitedRounds" type="checkbox"></label>
-                        </span>
-						<div class="startButton">
-							<button id="startButton" onclick="gamestart()" type="button">Start</button>
-						</div>
-					</div>
-					<div>
-						<div class="panel top-left-panel" id="topLeft" onclick="this.disabled=true; flashplayer(topLeft)"></div>
-						<div class="panel top-right-panel" id="topRight" onclick="this.disabled=true; flashplayer(topRight)"></div>
-					</div>
-					<div>
-						<div class="panel bottom-left-panel" id="bottomLeft" onclick="this.disabled=true; flashplayer(bottomLeft)"></div>
-						<div class="panel bottom-right-panel" id="bottomRight" onclick="this.disabled=true; flashplayer(bottomRight)"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<footer>
-		<div class="bottom-cover">
-			<h6>Contact Info</h6>
-			<div class="personal-info-item">
-				<div class="key">
-					<h6>Name:</h6>
-				</div>
-				<div class="value">
-					<p>George Swanson</p>
-				</div>
-			</div>
-			<div class="personal-info-item">
-				<div class="key">
-					<h6>Send Email<h6>
-				</div>
-				<div class="value">
-					<p><a href="mailto:%20georgeswansonwow@gmail.com" target="_blank">georgeswansonwow@gmail.com</a></p>
-				</div>
-			</div>
-			<div class="personal-info-item">
-				<div class="key">
-					<h6>Linkedin<h6>
-				</div>
-				<div class="value">
-					<p><a href="https://www.linkedin.com/in/george-swanson-98a04b197/" target="_blank">george-swanson-98a04b197</a></p>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<script src="assets/js/script.js">
-	</script>
-</body>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image" href="assets/img/favicon.png"/>
+      <title>Memory Game</title>
+      <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+   </head>
+   <body>
+      <!--to push fooetr down-->
+      <div id="container">
+         <!--to break up the rules and game-->
+         <div class="row">
+            <div class="col-md-4">
+               <h1>Memory Game</h1>
+               <p>Hello and welcome to my memory game. Help train and develop your own skills and memory with this fun simple game.</p>
+               <hr class="lead">
+               <h2>How to Start</h2>
+               <p>To start the game use the start button and then this button will disappear and the four coloured panels will appear and then the counter will increase to 1 and one panel will flash once it the panel is the original colour click the panel and if correct the counter will increase by 1 and that same panel will flash again with an additional one after it untill the counter is at 20 which is the last round</p>
+               <h2>What is one life</h2>
+               <p>if one life is checked that means if a colour is incorrectly clicked then the panels will flash white and round will be reset to 1</p>
+               <h2>What is Super Speed</h2>
+               <p>if Super Speed is checked that will reduce the speed of the flashes and the players flashes by half</p>
+               <h2>What is Unlimited Rounds</h2>
+               <p>if Unlimited Rounds is checked that will increase the final round from 20 to unlimited</p>
+               <p>all buttons can be turned on and off at any point and also can be put all on together</p>
+            </div>
+            <div class="col-dm-4">
+               <div class="interface">
+                  <div class="leveltext">
+                     Level
+                  </div>
+                  <div id="turn"></div>
+                  <div class="gamebuttons">
+                     <span>
+                     <label for="onelife">One Life <input class="onelife" id="onelife" name="onelife" type="checkbox"></label>
+                     <label for="superspeed">Super Speed <input class="superSpeed" id="superSpeed" name="superSpeed" type="checkbox"></label>
+                     <label for="unlimitedRounds">unlimited-rounds <input class="unlimitedRounds" id="unlimitedRounds" name="unlimitedRounds" type="checkbox"></label>
+                     </span>
+                     <div class="startButton">
+                        <button id="startButton" onclick="gamestart()" type="button">Start</button>
+                     </div>
+                  </div>
+                  <div>
+                     <!--to be able to evenly space out the sections of the circle-->
+                     <div class="panel top-left-panel" id="topLeft" onclick="this.disabled=true; flashplayer(topLeft)"></div>
+                     <div class="panel top-right-panel" id="topRight" onclick="this.disabled=true; flashplayer(topRight)"></div>
+                  </div>
+                  <div>
+                     <div class="panel bottom-left-panel" id="bottomLeft" onclick="this.disabled=true; flashplayer(bottomLeft)"></div>
+                     <div class="panel bottom-right-panel" id="bottomRight" onclick="this.disabled=true; flashplayer(bottomRight)"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <footer>
+         <div class="bottom-cover">
+            <h6>Contact Info</h6>
+            <div class="personal-info-item">
+               <div class="key">
+                  <h6>Name:</h6>
+               </div>
+               <div class="value">
+                  <p>George Swanson</p>
+               </div>
+            </div>
+            <div class="personal-info-item">
+               <div class="key">
+                  <h6>
+                  Send Email
+                  <h6>
+               </div>
+               <div class="value">
+                  <p><a href="mailto:%20georgeswansonwow@gmail.com" target="_blank">georgeswansonwow@gmail.com</a></p>
+               </div>
+            </div>
+            <div class="personal-info-item">
+               <div class="key">
+                  <h6>
+                  Linkedin
+                  <h6>
+               </div>
+               <div class="value">
+                  <p><a href="https://www.linkedin.com/in/george-swanson-98a04b197/" target="_blank">george-swanson-98a04b197</a></p>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <script src="assets/js/script.js"></script>
+   </body>
 </html>
