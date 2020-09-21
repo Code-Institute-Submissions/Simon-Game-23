@@ -208,4 +208,6 @@ I use the styling from my initial milestone project to build the footer.
 
 I also received help from student care for my JavaScript code.
 
+favicon from - https://favicon.io/favicon-generator/
+
 
