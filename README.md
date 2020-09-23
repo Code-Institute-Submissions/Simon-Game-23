@@ -17,25 +17,17 @@ There were two options to pick from and even throw I did struggling throw the Ja
 # User Experience (UX)
 ## User stories
 ### First interactions with the site
-I want a simple layout which is easy to understand and navigate
-I want simple colour and fonts to provide a focus on the game
-I want descriptive and straightforward instructions of how the games played
-I want to be able to play the game easily
+i. As a first time user I would want to be able to fully understand what the game is what the rules are and how to play
+1. simple layout which is easy to understand and navigate
+2. simple colour and fonts to provide a focus on the game
+3. descriptive and straightforward instructions of how the games played
+
 
 ### Experience / Frequent user
-I want a fast way to start the game
-I want an easy way to increase the difficulty of the game
-I want a simple focus on the game
-
-### Developer goals
-I want a random selection of colours/panels to be highlighted.
-I want the same series of colours/panels to be highlighted again in the next round, but with an additional colour/panel added to the sequence.
-If I press the wrong colour/panel in the sequence, I want to be notified of this and the random sequence to be repeated, after this has been completed I will be allowed to try again,
-I want a counter showing the number of panels that will need to be selected in the round and this to be shown as the game level,
-I want a 'One Life' option, which does not allow any incorrect panels to be selected or the game resets to the beginning,
-I want a 'super-speed' option which increases the speed of highlighting the colours/panels in the sequence,
-I want a 'unlimited-rounds' option which allows that game sequence to go on,
-I want to be notified when I have compiled all set round in the sequence
+ii. as an experienced/frequent user I want to be able to challenge myself and also be able to quickly and easily make the game harder at my will
+1. Simple layout which gets to the game quickly and easily
+2. Design focused on game with difficulty changes as above the game in between the level counter
+3. A pronounced focused on the colours that will change with a neutral colors and text
 
 # Design
 
@@ -108,18 +100,18 @@ Desktop view
  
  
 ### Desktop view
-![Desktop-view.png](https://github.com/Effull/Simon-Game/blob/master/assets/img/Desktop-view.png)
+![Desktop-view.png](https://github.com/Effull/Simon-Game/blob/master/Documentation/img/Desktop-view.png)
  
 ### Top of page tablet and phone view
-![Top-page-tablet.png](https://github.com/Effull/Simon-Game/blob/master/assets/img/Top-page-tablet.png) ![Top-page-phone.png](https://github.com/Effull/Simon-Game/blob/master/assets/img/Top-page-phone.png)
+![Top-page-tablet.png](https://github.com/Effull/Simon-Game/blob/master/Documentation/img/Top-page-tablet.png) ![Top-page-phone.png](https://github.com/Effull/Simon-Game/blob/master/assets/img/Top-page-phone.png)
 
 
 ### Middle of the page tablet and phone view 
-![Middle-page-tablet.png](https://github.com/Effull/Simon-Game/blob/master/assets/img/Middle-page-tablet.png) ![Middle-page-phone.png](https://github.com/Effull/Simon-Game/blob/master/assets/img/Middle-page-phone.png)
+![Middle-page-tablet.png](https://github.com/Effull/Simon-Game/blob/master/Documentation/img/Middle-page-tablet.png) ![Middle-page-phone.png](https://github.com/Effull/Simon-Game/blob/master/assets/img/Middle-page-phone.png)
 
 
 ### Game view with tablet and phone 
-![Game-view-tablet.png](https://github.com/Effull/Simon-Game/blob/master/assets/img/Game-view-tablet.png) ![Game-view-phone.png](https://github.com/Effull/Simon-Game/blob/master/assets/img/Game-view-phone.png)
+![Game-view-tablet.png](https://github.com/Effull/Simon-Game/blob/master/Documentation/img/Game-view-tablet.png) ![Game-view-phone.png](https://github.com/Effull/Simon-Game/blob/master/assets/img/Game-view-phone.png)
 
 
 these were resized and crop from the page so not to scale
@@ -184,13 +176,13 @@ Most of the checkboxes are used similarly to show true or false depending on the
 
 # Deployment
 ## GitHub Pages
-Website is deployed on Github, and this is how
-Signed in to get GitHub and access the repository for the website,
-Access the settings in the repository located underneath the location of the repository
-Scroll down to the "GitHub Pages" in the Options tab
-Then the "Source" section go to the drop-down menu "None" and select "Master Branch".
-Then refresh the page or wait for it to automatically refresh.
-Go back down to "GitHub Pages", and there will be a notification in green with the text "Your site is published at" with the link after if completed.
+* Website is deployed on Github, and this is how
+* Signed in to get GitHub and access the repository for the website,
+* Access the settings in the repository located underneath the location of the repository
+* Scroll down to the "GitHub Pages" in the Options tab
+* Then the "Source" section go to the drop-down menu "None" and select "Master Branch".
+* Then refresh the page or wait for it to automatically refresh.
+* Go back down to "GitHub Pages", and there will be a notification in green with the text "Your site is published at" with the link after if completed.
 
 # Credits
 Bootstrap
